@@ -1,0 +1,21 @@
+BUGZILA SIM RACING — STEP 2 UPLOAD
+==================================
+Repository: https://github.com/bugziladashboard/simracing
+Pages URL:  https://bugziladashboard.github.io/simracing/
+
+1. Open the repository on GitHub.
+2. Choose Add file > Upload files.
+3. Upload ALL CONTENTS of this Step 2 folder to the repository root.
+4. Existing files index.html, css/, js/, data/ should be replaced by this Step 2 version.
+5. Upload assets/ with the real dashboard screenshots.
+6. Commit message suggestion:
+   Add latest dashboards and real screenshots
+7. Wait for Pages deployment to finish.
+8. Open https://bugziladashboard.github.io/simracing/
+
+Expected current dashboard families:
+- MOZA KS Pro — V3.P3.006 (preview images from V3.P3.004)
+- MOZA CM2 — V1.P3.020
+- MOZA CM2 V2RQP — V2RQP.P3.003
+
+Download buttons intentionally remain staged until GitHub Releases are configured.

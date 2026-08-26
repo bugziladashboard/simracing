@@ -3,73 +3,108 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Bugzila Dashboard Hub — Sim racing dashboards for MOZA and SimHub.">
-  <title>Bugzila Dashboards</title>
+  <meta name="description" content="Bugzila Sim Racing — telemetry dashboards for MOZA KS Pro, MOZA CM2 and future SimHub releases.">
+  <meta name="theme-color" content="#111317">
+  <title>Bugzila Sim Racing Dashboards</title>
   <link rel="stylesheet" href="./css/dashboards.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="../">BUGZILA</a>
+    <a class="brand" href="./" aria-label="Bugzila Sim Racing home"><span class="brand-mark">B</span><span>BUGZILA</span></a>
     <nav class="site-nav" aria-label="Primary navigation">
       <a href="#dashboards">Dashboards</a>
+      <a href="#updates">Updates</a>
       <a href="#compatibility">Compatibility</a>
-      <a href="#car-play">Bugzila Car Play</a>
+      <a href="#car-play">Car Play</a>
       <a href="#support">Support</a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <p class="eyebrow">SIM RACING DASHBOARD HUB</p>
-      <h1>Bugzila Dashboards</h1>
-      <p class="hero-copy">Purpose-built telemetry dashboards for sim racers. Designed for clarity, speed and real hardware.</p>
-      <a class="button primary" href="#dashboards">Explore Dashboards</a>
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">SIM RACING DASHBOARD HUB</p>
+          <h1>Built for<br><span>the track.</span></h1>
+          <p class="hero-copy">Purpose-built telemetry dashboards for sim racers. Clean information, real-time data and layouts designed around real hardware.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#dashboards">Explore Dashboards</a>
+            <a class="button ghost" href="#car-play">Discover Bugzila Car Play</a>
+          </div>
+        </div>
+        <div class="telemetry-panel" aria-label="Dashboard hub summary">
+          <div class="telemetry-top"><span>BUGZILA // DASHBOARD HUB</span><span class="live-dot">ONLINE</span></div>
+          <div class="telemetry-main"><strong id="hero-dashboard-count">3</strong><span>LATEST DASHBOARDS</span></div>
+          <div class="telemetry-row"><span>MOZA KS PRO</span><b>READY</b></div>
+          <div class="telemetry-row"><span>MOZA CM2</span><b>READY</b></div>
+          <div class="telemetry-row"><span>SIMHUB</span><b class="muted-value">COMING</b></div>
+        </div>
+      </div>
     </section>
 
     <section id="dashboards" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">LATEST RELEASES</p>
-        <h2>Featured Dashboards</h2>
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow">CURRENT RELEASES</p>
+          <h2>Featured Dashboards</h2>
+        </div>
+        <p>Only the latest version of each dashboard family is featured here. Previous versions remain available in release history.</p>
       </div>
-      <div id="dashboard-grid" class="dashboard-grid" aria-live="polite">
-        <article class="dashboard-card placeholder-card">
-          <div class="card-body">
-            <span class="status-badge">STEP 1</span>
-            <h3>Dashboard catalog ready</h3>
-            <p>Dashboard cards will be generated from <code>data/dashboards.json</code> in the next phase.</p>
-          </div>
-        </article>
-      </div>
+      <div id="dashboard-grid" class="dashboard-grid" aria-live="polite"></div>
     </section>
 
-    <section id="compatibility" class="section muted-section">
+    <div id="dashboard-details"></div>
+
+    <section id="updates" class="section">
       <div class="section-heading">
-        <p class="eyebrow">HARDWARE & GAMES</p>
-        <h2>Compatibility</h2>
+        <p class="eyebrow">VERSION CONTROL</p>
+        <h2>Latest Updates</h2>
       </div>
-      <p>Verified compatibility data will be added from real testing results.</p>
+      <div id="updates-list" class="updates-list"></div>
+    </section>
+
+    <section id="compatibility" class="section">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow">HARDWARE & GAMES</p>
+          <h2>Compatibility</h2>
+        </div>
+        <p>Compatibility is shown conservatively. A game is marked Verified only when the current project has confirmed real-device testing.</p>
+      </div>
+      <div id="compatibility-table" class="table-wrap"></div>
+      <div id="status-legend" class="status-legend"></div>
     </section>
 
     <section id="car-play" class="section app-promo">
-      <div>
+      <div class="app-copy">
         <p class="eyebrow">MORE FROM BUGZILA</p>
         <h2>Bugzila Car Play</h2>
-        <p>Music and radio designed for the road, with Local Music, Online Radio and Android Auto.</p>
+        <p>Music and radio designed for the road. Enjoy Local Music, Online Radio and Android Auto in one focused driving experience.</p>
+        <div class="feature-chips"><span>Local Music</span><span>Online Radio</span><span>Android Auto</span></div>
       </div>
-      <a class="button secondary" href="https://play.google.com/store/apps/details?id=com.bugzilacarplay.app" target="_blank" rel="noopener noreferrer">Get it on Google Play</a>
+      <a class="button google-play" href="https://play.google.com/store/apps/details?id=com.bugzilacarplay.app" target="_blank" rel="noopener noreferrer">Get it on Google Play</a>
     </section>
 
     <section id="support" class="section support-section">
-      <p class="eyebrow">SUPPORT BUGZILA</p>
-      <h2>Support Dashboard Development</h2>
-      <p>Donation options will be added in a future update.</p>
+      <div>
+        <p class="eyebrow">SUPPORT BUGZILA</p>
+        <h2>Help Build the Next Dashboard</h2>
+        <p>Support options will be added later to help fund dashboard development, hardware testing and new platform support.</p>
+      </div>
       <span class="button disabled" aria-disabled="true">Coming Soon</span>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© Bugzila. Sim racing dashboards built for the track.</p>
+    <div><strong>BUGZILA SIM RACING</strong><span>Telemetry dashboards built for the track.</span></div>
+    <span>© 2026 Bugzila.</span>
   </footer>
+
+  <dialog id="image-modal" class="image-modal">
+    <button class="modal-close" type="button" aria-label="Close image">×</button>
+    <img id="modal-image" src="" alt="Dashboard screenshot preview">
+    <p id="modal-caption"></p>
+  </dialog>
 
   <script src="./js/dashboards.js" defer></script>
   <script src="./js/downloads.js" defer></script>

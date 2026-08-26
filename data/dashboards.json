@@ -1,5 +1,186 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "updatedAt": "2026-08-26",
-  "dashboards": []
+  "site": {
+    "name": "Bugzila Sim Racing",
+    "tagline": "Telemetry dashboards built for the track.",
+    "repository": "https://github.com/bugziladashboard/simracing",
+    "googlePlay": "https://play.google.com/store/apps/details?id=com.bugzilacarplay.app"
+  },
+  "statusDefinitions": {
+    "latest": "Newest published version in this dashboard family.",
+    "stable": "Recommended for normal use.",
+    "beta": "Feature-complete enough for testing, but may still change.",
+    "experimental": "Testing new ideas or telemetry behavior.",
+    "legacy": "Older version retained for release history."
+  },
+  "dashboards": [
+    {
+      "id": "moza-ks-pro-v3",
+      "family": "Bugzila Dashboard V3",
+      "title": "Bugzila Dashboard V3.P3.006",
+      "platform": "MOZA KS Pro",
+      "deviceProfile": "W18 Display",
+      "hardwareVersion": "RS21-W18-HW RGB-DU-V11",
+      "resolution": "780 × 248",
+      "version": "V3.P3.006",
+      "releaseDate": "2026-08-23",
+      "status": ["latest", "stable"],
+      "summary": "A compact three-page motorsport dashboard focused on adaptive shift guidance, pedal telemetry and lap analysis.",
+      "concept": "Keep the most important driving information readable at a glance on the KS Pro display while dedicating separate pages to pedal technique and lap performance.",
+      "previewVersion": "V3.P3.004",
+      "previewNote": "Preview screenshots are from V3.P3.004. V3.P3.006 keeps the same dashboard layout and telemetry behavior with the updated flat dark gray #1C1F24 background theme.",
+      "features": [
+        "Adaptive Shift Light",
+        "Speed & Gear",
+        "Engine RPM",
+        "Native Pedal Chart",
+        "Throttle & Brake %",
+        "G-Force",
+        "Lap Analysis",
+        "Average Speed Comparison"
+      ],
+      "pages": [
+        {
+          "name": "Page 1 — Drive / Adaptive Shift",
+          "description": "Vehicle speed, current gear, engine RPM and adaptive shift guidance.",
+          "image": "./assets/ks-pro/ks-pro-v3-page-1.png"
+        },
+        {
+          "name": "Page 2 — Native Pedal Chart",
+          "description": "Continuous throttle and brake traces using two native Chart.qml components with live percentages.",
+          "image": "./assets/ks-pro/ks-pro-v3-page-2.png"
+        },
+        {
+          "name": "Page 3 — Lap Analysis",
+          "description": "Current, previous, best and average lap analysis with average-speed comparison.",
+          "image": "./assets/ks-pro/ks-pro-v3-page-3.png"
+        }
+      ],
+      "compatibility": {
+        "hardware": ["MOZA KS Pro"],
+        "games": [
+          {"name": "Assetto Corsa Competizione", "level": "verified"}
+        ]
+      },
+      "releaseHistory": [
+        {"version": "V3.P3.006", "status": ["latest", "stable"]},
+        {"version": "V3.P3.004", "status": ["legacy"]},
+        {"version": "V2.P1.005", "status": ["legacy"]},
+        {"version": "V1.P3.010", "status": ["legacy"]}
+      ],
+      "download": {"releaseAssetUrl": "", "fileName": "Bugzila_Dashboard_V3.P3.006.mzdash"}
+    },
+    {
+      "id": "moza-cm2-v1",
+      "family": "Bugzila CM2 Dashboard V1",
+      "title": "Bugzila CM2 V1.P3.020",
+      "platform": "MOZA CM2 Dashboard",
+      "deviceProfile": "S09 Display",
+      "hardwareVersion": "RS21-W08-HW SM-DU-V14",
+      "resolution": "1280 × 720",
+      "version": "V1.P3.020",
+      "releaseDate": "2026-08-25",
+      "status": ["latest", "stable"],
+      "summary": "A full-size three-page CM2 dashboard combining track awareness, pedal and tyre telemetry, and race management.",
+      "concept": "Separate driving, vehicle-state and race-management information into dedicated screens so the driver can switch context without overcrowding one page.",
+      "previewVersion": "V1.P3.020",
+      "previewNote": "Screenshots are from the current V1.P3.020 package.",
+      "features": [
+        "Track Map",
+        "Speed / Gear / RPM",
+        "Throttle & Brake Bars",
+        "Pedal Chart",
+        "Tyre Pressure & Temperature",
+        "Brake Temperature",
+        "Brake Bias & ABS",
+        "Race Management",
+        "Fuel & Gap",
+        "Flag / Status"
+      ],
+      "pages": [
+        {
+          "name": "Page 1 — Map Drive",
+          "description": "Track map, core driving telemetry, fuel, gap, controls and race-status information.",
+          "image": "./assets/cm2/cm2-v1-page-1.png"
+        },
+        {
+          "name": "Page 2 — Pedal / Tyres",
+          "description": "Pedal traces, tyre pressure and temperature, brake temperature, brake bias, ABS and vehicle-state telemetry.",
+          "image": "./assets/cm2/cm2-v1-page-2.png"
+        },
+        {
+          "name": "Page 3 — Race Management",
+          "description": "Lap timing, position, gap, flags, fuel remaining and race-management information.",
+          "image": "./assets/cm2/cm2-v1-page-3.png"
+        }
+      ],
+      "compatibility": {
+        "hardware": ["MOZA CM2 Dashboard"],
+        "games": [
+          {"name": "Assetto Corsa Competizione", "level": "verified"},
+          {"name": "Assetto Corsa EVO", "level": "partial", "note": "Core telemetry tested; track-map behavior may vary."}
+        ]
+      },
+      "releaseHistory": [
+        {"version": "V1.P3.020", "status": ["latest", "stable"]}
+      ],
+      "download": {"releaseAssetUrl": "", "fileName": "Bugzila_CM2_V1.P3.020.mzdash"}
+    },
+    {
+      "id": "moza-cm2-v2rqp",
+      "family": "Bugzila CM2 V2RQP",
+      "title": "Bugzila CM2 V2RQP.P3.003",
+      "platform": "MOZA CM2 Dashboard",
+      "deviceProfile": "S09 Display",
+      "hardwareVersion": "RS21-W08-HW SM-DU-V14",
+      "resolution": "1280 × 720",
+      "version": "V2RQP.P3.003",
+      "releaseDate": "2026-08-25",
+      "status": ["latest", "stable"],
+      "summary": "A session-focused CM2 dashboard with dedicated Race, Qualifying and Practice modes.",
+      "concept": "Present different information according to the driver's session goal: situational awareness in races, lap performance in qualifying and telemetry analysis in practice.",
+      "previewVersion": "V2RQP.P3.003",
+      "previewNote": "Screenshots are from the current V2RQP.P3.003 package.",
+      "features": [
+        "Race Mode",
+        "Qualifying Mode",
+        "Practice Mode",
+        "Radar",
+        "Track Map",
+        "Race Control",
+        "Fuel Management",
+        "Lap & Sector Timing",
+        "Tyre Information",
+        "Throttle / Brake Telemetry"
+      ],
+      "pages": [
+        {
+          "name": "Page 1 — Race Mode",
+          "description": "Race-focused layout with radar, track map, session, position, lap, race control, fuel and vehicle controls.",
+          "image": "./assets/cm2-v2rqp/cm2-v2rqp-page-1.png"
+        },
+        {
+          "name": "Page 2 — Qualified Mode",
+          "description": "Qualifying-focused layout with lap timing, predicted lap, tyres, session information and race control.",
+          "image": "./assets/cm2-v2rqp/cm2-v2rqp-page-2.png"
+        },
+        {
+          "name": "Page 3 — Practice Mode",
+          "description": "Practice-focused layout with sector timing and throttle / brake telemetry for driving analysis.",
+          "image": "./assets/cm2-v2rqp/cm2-v2rqp-page-3.png"
+        }
+      ],
+      "compatibility": {
+        "hardware": ["MOZA CM2 Dashboard"],
+        "games": []
+      },
+      "releaseHistory": [
+        {"version": "V2RQP.P3.003", "status": ["latest", "stable"]},
+        {"version": "V2RQP.P3.002", "status": ["legacy"]},
+        {"version": "V2RQP.P3.001", "status": ["legacy"]}
+      ],
+      "download": {"releaseAssetUrl": "", "fileName": "Bugzila_CM2_V2RQP.P3.003.mzdash"}
+    }
+  ]
 }
