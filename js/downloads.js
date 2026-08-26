@@ -1,8 +1,11 @@
 window.BugzilaDashboards = window.BugzilaDashboards || {};
 
 (function () {
-  const CACHE_KEY = "bugzila-release-stats-v1";
+  const CACHE_KEY = "bugzila-release-stats-v2";
   const CACHE_TTL_MS = 10 * 60 * 1000;
+  const POST_DOWNLOAD_REFRESH_MS = 5000;
+  let lastData = null;
+  let refreshTimer = null;
 
   function findDashboard(id) {
     return window.BugzilaDashboards.data?.dashboards?.find(d => d.id === id);
@@ -46,11 +49,18 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
     } catch {}
   }
 
-  async function fetchReleases(apiUrl) {
-    const cached = getCachedReleases();
-    if (cached) return cached;
+  function clearCachedReleases() {
+    try { sessionStorage.removeItem(CACHE_KEY); } catch {}
+  }
 
-    const response = await fetch(apiUrl, {
+  async function fetchReleases(apiUrl, force = false) {
+    if (!force) {
+      const cached = getCachedReleases();
+      if (cached) return cached;
+    }
+
+    const separator = apiUrl.includes("?") ? "&" : "?";
+    const response = await fetch(`${apiUrl}${separator}_=${Date.now()}`, {
       headers: { "Accept": "application/vnd.github+json" },
       cache: "no-store"
     });
@@ -86,14 +96,13 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
     return name.endsWith(".mzdash") || name.endsWith(".simhubdash");
   }
 
-  async function hydrateDownloads(data) {
+  async function hydrateDownloads(data, force = false) {
     const apiUrl = data.site?.githubApiReleases;
     if (!apiUrl) return;
-
-    data.dashboards.forEach(d => setButtonState(d.id, false));
+    lastData = data;
 
     try {
-      const releases = await fetchReleases(apiUrl);
+      const releases = await fetchReleases(apiUrl, force);
       data.dashboards.forEach(d => resolveDashboardRelease(d, releases));
 
       const total = releases
@@ -105,13 +114,24 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
       if (heroTotal) heroTotal.textContent = formatCount(total);
     } catch (error) {
       console.warn("Unable to load GitHub download counts", error);
-      data.dashboards.forEach(d => {
-        setCount(d.id, 0, false);
-        setButtonState(d.id, false);
-      });
-      const heroTotal = document.getElementById("hero-total-downloads");
-      if (heroTotal) heroTotal.textContent = "—";
+      if (!force) {
+        data.dashboards.forEach(d => {
+          setCount(d.id, 0, false);
+          setButtonState(d.id, false);
+        });
+        const heroTotal = document.getElementById("hero-total-downloads");
+        if (heroTotal) heroTotal.textContent = "—";
+      }
     }
+  }
+
+  function schedulePostDownloadRefresh() {
+    clearTimeout(refreshTimer);
+    refreshTimer = setTimeout(() => {
+      if (!lastData) return;
+      clearCachedReleases();
+      hydrateDownloads(lastData, true);
+    }, POST_DOWNLOAD_REFRESH_MS);
   }
 
   document.addEventListener("bugzila:dashboards-ready", (event) => {
@@ -129,6 +149,18 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
     if (!url) return;
 
     window.BugzilaAnalytics?.trackDashboardDownload?.(dashboard);
+
+    // GitHub increments release-asset download_count after the asset request.
+    // Re-check a few seconds after the click so the visible counter does not
+    // remain stale for the normal 10-minute session cache window.
+    schedulePostDownloadRefresh();
     window.location.href = url;
+  });
+
+  window.addEventListener("focus", () => {
+    if (!lastData) return;
+    // Useful when the browser hands the download to another UI and then returns.
+    clearCachedReleases();
+    hydrateDownloads(lastData, true);
   });
 })();

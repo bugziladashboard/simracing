@@ -43,3 +43,10 @@ The exact release asset names are defined in `data/dashboards.json`.
 Upload the contents of this package directly to the repository root, replacing the existing Step 2.1 files.
 
 Do not upload the separate Step 3 Release Assets package into the repository. Those `.mzdash` files belong in **GitHub Releases**.
+
+
+## Step 3.1 download-count hotfix
+- Keeps normal GitHub API release-stat caching at 10 minutes.
+- Forces a fresh GitHub API check 5 seconds after a dashboard download click.
+- Forces a fresh check when the page regains focus.
+- Uses a new cache key and cache-busted JavaScript URL.
