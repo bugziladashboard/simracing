@@ -1,0 +1,12 @@
+BUGZILA SIM RACING — STEP 3
+
+1. Publish the three GitHub Releases using the separate RELEASE_ASSETS package.
+2. Upload the CONTENTS of this Step 3 website package to the root of:
+   https://github.com/bugziladashboard/simracing
+3. Replace the existing index.html, css/, js/, data/ and README.md files.
+4. Commit message:
+   Add GitHub Releases downloads and download counters
+5. Wait for GitHub Pages deployment to complete.
+6. Open:
+   https://bugziladashboard.github.io/simracing/?build=step3
+7. Press Ctrl + F5 once.

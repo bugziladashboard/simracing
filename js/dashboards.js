@@ -5,6 +5,10 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
   const statusBadge = (status) => `<span class="status-badge ${statusClass(status)}">${status}</span>`;
   const esc = (value = "") => String(value).replace(/[&<>"]/g, (ch) => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[ch]));
 
+  function downloadStat(d) {
+    return `<span class="download-stat" data-download-count="${esc(d.id)}">Checking downloads…</span>`;
+  }
+
   function dashboardCard(d) {
     const preview = d.pages?.[0]?.image || "";
     return `
@@ -20,6 +24,7 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
             <span class="meta-pill">${d.pages.length} Pages</span>
             <span class="meta-pill">${esc(d.deviceProfile)}</span>
           </div>
+          <div class="download-line">${downloadStat(d)}</div>
           <div class="card-actions">
             <a class="button secondary small" href="#${esc(d.id)}">View Details</a>
             <button class="button primary small download-button" type="button" data-dashboard-id="${esc(d.id)}">Download</button>
@@ -29,7 +34,7 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
   }
 
   function dashboardDetail(d) {
-    const gallery = d.pages.map((p, i) => `
+    const gallery = d.pages.map((p) => `
       <button class="gallery-item" type="button" data-image="${esc(p.image)}" data-caption="${esc(`${d.title} — ${p.name}`)}">
         <img src="${esc(p.image)}" alt="${esc(`${d.title} ${p.name}`)}" loading="lazy">
         <span class="gallery-caption"><strong>${esc(p.name)}</strong><span>${esc(p.description)}</span></span>
@@ -39,6 +44,8 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
     const history = d.releaseHistory.map(r => `
       <div class="release-item"><strong>${esc(r.version)}</strong><div class="release-statuses">${r.status.map(statusBadge).join("")}</div></div>`).join("");
 
+    const fileExtension = d.download?.fileName?.endsWith(".simhubdash") ? ".simhubdash" : ".mzdash";
+
     return `
       <section id="${esc(d.id)}" class="dashboard-detail">
         <div class="detail-header">
@@ -47,6 +54,10 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
             <h2>${esc(d.family)}</h2>
             <div class="status-row">${d.status.map(statusBadge).join("")}</div>
             <p>${esc(d.summary)}</p>
+            <div class="detail-download-row">
+              <button class="button primary download-button" type="button" data-dashboard-id="${esc(d.id)}">Download ${esc(fileExtension)}</button>
+              ${downloadStat(d)}
+            </div>
           </div>
           <div class="detail-specs">
             <div class="spec"><span>Current Version</span><strong>${esc(d.version)}</strong></div>
@@ -95,6 +106,12 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
     return Object.entries(defs).map(([key, value]) => `<div class="legend-item">${statusBadge(key)}<span>${esc(value)}</span></div>`).join("");
   }
 
+  function heroRows(dashboards) {
+    return dashboards
+      .map(d => `<div class="telemetry-row"><span>${esc(d.heroLabel || d.platform)}</span><b>READY</b></div>`)
+      .join("");
+  }
+
   function setupModal() {
     const modal = document.getElementById("image-modal");
     const image = document.getElementById("modal-image");
@@ -113,12 +130,13 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
 
   async function init() {
     try {
-      const response = await fetch("./data/dashboards.json?v=20260826-step2-1", { cache: "no-store" });
+      const response = await fetch("./data/dashboards.json?v=20260826-step3", { cache: "no-store" });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const data = await response.json();
       window.BugzilaDashboards.data = data;
 
       document.getElementById("hero-dashboard-count").textContent = data.dashboards.length;
+      document.getElementById("hero-release-rows").innerHTML = heroRows(data.dashboards);
       document.getElementById("dashboard-grid").innerHTML = data.dashboards.map(dashboardCard).join("");
       document.getElementById("dashboard-details").innerHTML = data.dashboards.map(dashboardDetail).join("");
       document.getElementById("updates-list").innerHTML = updates(data.dashboards);

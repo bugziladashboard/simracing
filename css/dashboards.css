@@ -69,6 +69,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .telemetry-main span { margin-top: 11px; font-weight: 900; letter-spacing: .1em; color: var(--muted); }
 .telemetry-row b { color: var(--green); }
 .telemetry-row .muted-value { color: #69717c; }
+.telemetry-downloads { position: relative; display: flex; align-items: baseline; justify-content: space-between; gap: 18px; padding: 15px 18px 17px; color: var(--muted); font-size: .7rem; letter-spacing: .08em; }
+.telemetry-downloads strong { color: var(--text); font-size: 1.2rem; letter-spacing: 0; }
 
 .section { padding: 78px 0; border-top: 1px solid var(--line-soft); }
 .section-heading { margin-bottom: 34px; }
@@ -93,6 +95,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .status-beta { color: #211704; background: var(--yellow); }
 .status-experimental { color: #100a20; background: var(--purple); }
 .status-legacy { color: #c8ced6; border: 1px solid #606975; background: #2a2f36; }
+.download-line { min-height: 24px; margin: -8px 0 12px; }
+.download-stat { color: var(--muted); font-size: .78rem; font-weight: 700; }
+.download-stat::before { content: "↓"; margin-right: 6px; color: var(--accent); font-weight: 950; }
+.download-stat.pending { color: #727b87; }
+.download-stat.pending::before { content: "•"; color: #727b87; }
 .card-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
 
 .button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 18px; border: 0; border-radius: 9px; font: inherit; font-weight: 850; letter-spacing: .01em; cursor: pointer; }
@@ -100,12 +107,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .button.secondary, .button.ghost { border: 1px solid var(--line); background: var(--panel); color: var(--text); }
 .button.ghost { background: transparent; }
 .button.disabled { border: 1px solid var(--line); color: #6f7782; background: #171a1e; cursor: not-allowed; }
+.button:disabled, .button.is-pending { border: 1px solid var(--line); background: #171a1e; color: #727b87; box-shadow: none; cursor: not-allowed; }
 .button.small { min-height: 40px; padding-inline: 14px; font-size: .86rem; }
 
 .dashboard-detail { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; padding: 78px 0; border-top: 1px solid var(--line-soft); }
 .detail-header { display: grid; grid-template-columns: 1.1fr .9fr; gap: 44px; align-items: end; margin-bottom: 30px; }
 .detail-title h2 { margin: 6px 0 14px; font-size: clamp(2.2rem, 5vw, 4.4rem); line-height: .98; letter-spacing: -.055em; }
 .detail-title p { margin: 0; max-width: 720px; color: var(--muted); }
+.detail-download-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 22px; }
 .detail-specs { display: grid; grid-template-columns: repeat(2,1fr); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
 .spec { padding: 13px 15px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .spec:nth-child(2n) { border-right: 0; }
@@ -114,11 +123,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .spec strong { display: block; margin-top: 3px; font-size: .92rem; }
 
 .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 28px 0 34px; }
-.gallery-item { overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: #080a0c; cursor: zoom-in; }
+.gallery-item { overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: #080a0c; color: var(--text); font: inherit; text-align: left; cursor: zoom-in; }
 .gallery-item img { width: 100%; aspect-ratio: 16 / 9; object-fit: contain; background: #080a0c; transition: transform .25s ease; }
 .gallery-item:hover img { transform: scale(1.025); }
 .gallery-caption { padding: 13px 14px 15px; }
-.gallery-caption strong { display: block; font-size: .9rem; }
+.gallery-caption strong { display: block; color: var(--text); font-size: .9rem; }
 .gallery-caption span { display: block; margin-top: 3px; color: var(--muted); font-size: .78rem; }
 
 .detail-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 20px; }

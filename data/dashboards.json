@@ -1,11 +1,14 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "updatedAt": "2026-08-26",
   "site": {
     "name": "Bugzila Sim Racing",
     "tagline": "Telemetry dashboards built for the track.",
     "repository": "https://github.com/bugziladashboard/simracing",
-    "googlePlay": "https://play.google.com/store/apps/details?id=com.bugzilacarplay.app"
+    "googlePlay": "https://play.google.com/store/apps/details?id=com.bugzilacarplay.app",
+    "githubOwner": "bugziladashboard",
+    "githubRepo": "simracing",
+    "githubApiReleases": "https://api.github.com/repos/bugziladashboard/simracing/releases?per_page=100"
   },
   "statusDefinitions": {
     "latest": "Newest published version in this dashboard family.",
@@ -25,7 +28,10 @@
       "resolution": "780 × 248",
       "version": "V3.P3.006",
       "releaseDate": "2026-08-23",
-      "status": ["latest", "stable"],
+      "status": [
+        "latest",
+        "stable"
+      ],
       "summary": "A compact three-page motorsport dashboard focused on adaptive shift guidance, pedal telemetry and lap analysis.",
       "concept": "Keep the most important driving information readable at a glance on the KS Pro display while dedicating separate pages to pedal technique and lap performance.",
       "previewVersion": "V3.P3.004",
@@ -58,18 +64,50 @@
         }
       ],
       "compatibility": {
-        "hardware": ["MOZA KS Pro"],
+        "hardware": [
+          "MOZA KS Pro"
+        ],
         "games": [
-          {"name": "Assetto Corsa Competizione", "level": "verified"}
+          {
+            "name": "Assetto Corsa Competizione",
+            "level": "verified"
+          }
         ]
       },
       "releaseHistory": [
-        {"version": "V3.P3.006", "status": ["latest", "stable"]},
-        {"version": "V3.P3.004", "status": ["legacy"]},
-        {"version": "V2.P1.005", "status": ["legacy"]},
-        {"version": "V1.P3.010", "status": ["legacy"]}
+        {
+          "version": "V3.P3.006",
+          "status": [
+            "latest",
+            "stable"
+          ]
+        },
+        {
+          "version": "V3.P3.004",
+          "status": [
+            "legacy"
+          ]
+        },
+        {
+          "version": "V2.P1.005",
+          "status": [
+            "legacy"
+          ]
+        },
+        {
+          "version": "V1.P3.010",
+          "status": [
+            "legacy"
+          ]
+        }
       ],
-      "download": {"releaseAssetUrl": "", "fileName": "Bugzila_Dashboard_V3.P3.006.mzdash"}
+      "download": {
+        "releaseTag": "ks-pro-v3.p3.006",
+        "fileName": "Bugzila_Dashboard_V3.P3.006.mzdash",
+        "releaseAssetUrl": "https://github.com/bugziladashboard/simracing/releases/download/ks-pro-v3.p3.006/Bugzila_Dashboard_V3.P3.006.mzdash",
+        "releasePageUrl": "https://github.com/bugziladashboard/simracing/releases/tag/ks-pro-v3.p3.006"
+      },
+      "heroLabel": "MOZA KS PRO"
     },
     {
       "id": "moza-cm2-v1",
@@ -81,7 +119,10 @@
       "resolution": "1280 × 720",
       "version": "V1.P3.020",
       "releaseDate": "2026-08-25",
-      "status": ["latest", "stable"],
+      "status": [
+        "latest",
+        "stable"
+      ],
       "summary": "A full-size three-page CM2 dashboard combining track awareness, pedal and tyre telemetry, and race management.",
       "concept": "Separate driving, vehicle-state and race-management information into dedicated screens so the driver can switch context without overcrowding one page.",
       "previewVersion": "V1.P3.020",
@@ -116,16 +157,37 @@
         }
       ],
       "compatibility": {
-        "hardware": ["MOZA CM2 Dashboard"],
+        "hardware": [
+          "MOZA CM2 Dashboard"
+        ],
         "games": [
-          {"name": "Assetto Corsa Competizione", "level": "verified"},
-          {"name": "Assetto Corsa EVO", "level": "partial", "note": "Core telemetry tested; track-map behavior may vary."}
+          {
+            "name": "Assetto Corsa Competizione",
+            "level": "verified"
+          },
+          {
+            "name": "Assetto Corsa EVO",
+            "level": "partial",
+            "note": "Core telemetry tested; track-map behavior may vary."
+          }
         ]
       },
       "releaseHistory": [
-        {"version": "V1.P3.020", "status": ["latest", "stable"]}
+        {
+          "version": "V1.P3.020",
+          "status": [
+            "latest",
+            "stable"
+          ]
+        }
       ],
-      "download": {"releaseAssetUrl": "", "fileName": "Bugzila_CM2_V1.P3.020.mzdash"}
+      "download": {
+        "releaseTag": "cm2-v1.p3.020",
+        "fileName": "Bugzila_CM2_V1.P3.020.mzdash",
+        "releaseAssetUrl": "https://github.com/bugziladashboard/simracing/releases/download/cm2-v1.p3.020/Bugzila_CM2_V1.P3.020.mzdash",
+        "releasePageUrl": "https://github.com/bugziladashboard/simracing/releases/tag/cm2-v1.p3.020"
+      },
+      "heroLabel": "MOZA CM2 V1"
     },
     {
       "id": "moza-cm2-v2rqp",
@@ -137,7 +199,10 @@
       "resolution": "1280 × 720",
       "version": "V2RQP.P3.003",
       "releaseDate": "2026-08-25",
-      "status": ["latest", "stable"],
+      "status": [
+        "latest",
+        "stable"
+      ],
       "summary": "A session-focused CM2 dashboard with dedicated Race, Qualifying and Practice modes.",
       "concept": "Present different information according to the driver's session goal: situational awareness in races, lap performance in qualifying and telemetry analysis in practice.",
       "previewVersion": "V2RQP.P3.003",
@@ -172,15 +237,39 @@
         }
       ],
       "compatibility": {
-        "hardware": ["MOZA CM2 Dashboard"],
+        "hardware": [
+          "MOZA CM2 Dashboard"
+        ],
         "games": []
       },
       "releaseHistory": [
-        {"version": "V2RQP.P3.003", "status": ["latest", "stable"]},
-        {"version": "V2RQP.P3.002", "status": ["legacy"]},
-        {"version": "V2RQP.P3.001", "status": ["legacy"]}
+        {
+          "version": "V2RQP.P3.003",
+          "status": [
+            "latest",
+            "stable"
+          ]
+        },
+        {
+          "version": "V2RQP.P3.002",
+          "status": [
+            "legacy"
+          ]
+        },
+        {
+          "version": "V2RQP.P3.001",
+          "status": [
+            "legacy"
+          ]
+        }
       ],
-      "download": {"releaseAssetUrl": "", "fileName": "Bugzila_CM2_V2RQP.P3.003.mzdash"}
+      "download": {
+        "releaseTag": "cm2-v2rqp.p3.003",
+        "fileName": "Bugzila_CM2_V2RQP.P3.003.mzdash",
+        "releaseAssetUrl": "https://github.com/bugziladashboard/simracing/releases/download/cm2-v2rqp.p3.003/Bugzila_CM2_V2RQP.P3.003.mzdash",
+        "releasePageUrl": "https://github.com/bugziladashboard/simracing/releases/tag/cm2-v2rqp.p3.003"
+      },
+      "heroLabel": "MOZA CM2 V2RQP"
     }
   ]
 }

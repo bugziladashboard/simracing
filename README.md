@@ -1,45 +1,45 @@
-# Bugzila Sim Racing Dashboard Hub — Step 2
+# Bugzila Sim Racing Dashboard Hub — Step 3
 
-This package is prepared for the repository:
+Repository:
 
 `https://github.com/bugziladashboard/simracing`
 
-GitHub Pages target:
+GitHub Pages:
 
 `https://bugziladashboard.github.io/simracing/`
 
-## Step 2 content
+## Step 3
 
-- Latest MOZA KS Pro dashboard: `V3.P3.006`
-  - Preview screenshots intentionally sourced from `V3.P3.004` per project requirement.
-  - V3.P3.006 keeps the same layout/telemetry behavior and changes the background to flat dark gray `#1C1F24`.
-- Latest MOZA CM2 V1 dashboard: `V1.P3.020`
-- Latest MOZA CM2 V2RQP dashboard: `V2RQP.P3.003`
-- Real screenshots for all three pages of each dashboard.
-- Data-driven catalog in `data/dashboards.json`.
-- Release Status badges: Latest, Stable, Beta, Experimental, Legacy.
-- Release history metadata.
-- Responsive screenshot gallery with full-screen preview.
-- Conservative compatibility table.
-- Bugzila Car Play Google Play promotion.
-- Download buttons are intentionally staged for the GitHub Releases step.
-- GA4 is intentionally staged for the analytics step.
+Step 3 adds production GitHub Release downloads and download statistics.
 
-## Upload to GitHub
+### Included website changes
 
-Upload the **contents of this folder directly to the repository root**.
+- Fixes screenshot captions so page titles remain readable on the dark gallery cards.
+- Changes the Hero status panel from `LATEST DASHBOARDS` to `CURRENT RELEASES`.
+- Hero release rows are generated automatically from `data/dashboards.json`.
+- Current release rows now include:
+  - MOZA KS Pro
+  - MOZA CM2 V1
+  - MOZA CM2 V2RQP
+  - SimHub remains `COMING`.
+- Adds a real download count to each Featured Dashboard card and detail section.
+- Adds `TOTAL DASHBOARD DOWNLOADS` to the Hero status panel.
+- Uses the GitHub Releases API to retrieve each release asset's real `download_count`.
+- Download buttons remain disabled until the matching GitHub Release asset is found.
+- Uses session caching for 10 minutes to reduce GitHub API requests.
+- Keeps GA4 event support staged in `analytics.js`; a production GA4 Measurement ID is still a later analytics step.
+- Uses Step 3 cache-busting query strings for CSS, JavaScript and dashboard JSON.
 
-The root should contain:
+## Required GitHub Release tags
 
-- `index.html`
-- `css/`
-- `js/`
-- `data/`
-- `assets/`
-- `README.md`
+- `ks-pro-v3.p3.006`
+- `cm2-v1.p3.020`
+- `cm2-v2rqp.p3.003`
 
-Do not place the package inside another `dashboards/` folder.
+The exact release asset names are defined in `data/dashboards.json`.
 
+## Upload
 
-## Step 2.1 cache fix
-CSS, JavaScript and dashboard JSON URLs include a build query string to prevent stale Step 1 assets from being served after deployment.
+Upload the contents of this package directly to the repository root, replacing the existing Step 2.1 files.
+
+Do not upload the separate Step 3 Release Assets package into the repository. Those `.mzdash` files belong in **GitHub Releases**.
