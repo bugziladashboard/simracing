@@ -39,3 +39,7 @@ The root should contain:
 - `README.md`
 
 Do not place the package inside another `dashboards/` folder.
+
+
+## Step 2.1 cache fix
+CSS, JavaScript and dashboard JSON URLs include a build query string to prevent stale Step 1 assets from being served after deployment.
