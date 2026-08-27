@@ -1,0 +1,1 @@
+Step 5.9 — Footer copyright update only. Changed © 2026 Bugzila. to © 2026 Bugzila Labs. All Step 5.8 functionality preserved.
