@@ -1,7 +1,7 @@
 window.BugzilaCommunity = window.BugzilaCommunity || {};
 
 (function () {
-  const CONFIG_URL = "./data/community.json?v=20260827-step4";
+  const CONFIG_URL = "./data/community.json?v=20260827-step4-1";
   let config = null;
   let dashboards = [];
 
@@ -12,7 +12,7 @@ window.BugzilaCommunity = window.BugzilaCommunity || {};
   }
 
   function discussionTerm(dashboard) {
-    return `Bugzila Dashboard Feedback — ${dashboard.id}`;
+    return dashboard.id;
   }
 
   function clearGiscus() {

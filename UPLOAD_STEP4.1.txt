@@ -1,0 +1,10 @@
+STEP 4.1 — LIVE GISCUS COMMENTS
+
+Upload all files/folders in this package to the ROOT of:
+https://github.com/bugziladashboard/simracing
+
+Overwrite existing Step 4 files.
+Suggested commit:
+Activate live giscus comments for dashboard feedback
+
+After GitHub Pages deploys, hard refresh the page and test Comments & Feedback.

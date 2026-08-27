@@ -1,18 +1,15 @@
-# Bugzila Sim Racing Dashboard Hub — Step 4
+# Bugzila Sim Racing Dashboard Hub — Step 4.1
 
-This package adds Community Feedback & Comments infrastructure to the existing dashboard hub.
+Live giscus comments are activated for `bugziladashboard/simracing`.
 
-## Added
-- Community navigation and overview section
-- Per-dashboard Comments & Feedback action
-- Report a Bug, Request a Feature and Q&A actions
-- giscus / GitHub Discussions integration scaffold
-- One persistent feedback thread per Dashboard Family via `mapping=specific`
-- Lazy comment loading in a modal so the page does not load multiple discussion iframes at once
-- `data/community.json` configuration file
-- `giscus.json` origin restriction for the GitHub Pages domain
+- Repository ID: `R_kgDOUE9MRQ`
+- Category: `Dashboard Feedback`
+- Category ID: `DIC_kwDOUE9MRc4DERzY`
+- Mapping: `specific`
+- Comment term: stable Dashboard Family ID (`moza-ks-pro-v3`, `moza-ks-pro-v2`, etc.)
+- Theme: GitHub Dark
+- Language: English
 
-## Important
-Comments remain in setup mode until GitHub Discussions is enabled, the giscus app is installed, and `repoId` / `categoryId` are copied into `data/community.json`.
+Each dashboard family keeps one continuous discussion thread across future releases in that family.
 
-Permanent brand phrase: **BUILT FOR THE TRACK.**
+Upload the contents of this package to the repository root and overwrite the Step 4 files.

@@ -1,9 +1,9 @@
 {
-  "enabled": false,
+  "enabled": true,
   "repo": "bugziladashboard/simracing",
-  "repoId": "",
+  "repoId": "R_kgDOUE9MRQ",
   "category": "Dashboard Feedback",
-  "categoryId": "",
+  "categoryId": "DIC_kwDOUE9MRc4DERzY",
   "mapping": "specific",
   "strict": "1",
   "reactionsEnabled": "1",
