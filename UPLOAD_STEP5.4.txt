@@ -1,0 +1,1 @@
+Step 5.4 — Racing flag background enhanced: larger inward sweep from left and bottom-right, stronger opacity, softer fade toward center, more flowing/checkered appearance. Preserves Step 5.3 functionality including GA4, Community, giscus, download counter, mobile layout, and dashboard package frame.

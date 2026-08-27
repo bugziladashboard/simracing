@@ -1,3 +1,9 @@
+# Step 5.4
+
+- Base: Step 5.3
+- Change: refined racing-flag background corners with larger inward reach, more visible opacity, and a more flowing fade.
+- Preserved: GA4, Community, giscus, download tracking, mobile fit, hamburger menu, dashboard package frame.
+
 # Bugzila Sim Racing Dashboard Hub — Step 4.2
 
 Community UX polish release.
