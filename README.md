@@ -1,3 +1,17 @@
+# Step 5.7
+
+- Base: Step 5.6 MOZA Hardware Compatibility.
+- Visual rollback only: restored the Racing Flag background exactly from Step 5.3 Dashboard Package Outer Frame.
+- All Step 5.6 hardware compatibility, GA4, Community/giscus, Discussions, download counter, hamburger/mobile UI and package grouping are preserved.
+
+# Step 5.6 — MOZA Hardware Compatibility Expansion
+
+- Base: Step 5.5.
+- Adds MOZA CS Pro as supported/shared-format hardware for all Bugzila KS Pro dashboard families, based on MOZA's official Dash Community cross-tagging of CS Pro + KS Pro dashboard files.
+- Adds Porsche Mission R as a same-720P candidate for CM2 families, explicitly marked NOT VERIFIED for .mzdash/device-profile compatibility.
+- Adds newly announced 2.99-inch Mercedes-Benz GT and Ford Mustang GTD wheels as future candidates only; exact pixel resolution/import compatibility must be verified before support status is upgraded.
+- Preserves GA4, Community/giscus, Discussions, download counters, hamburger menu, mobile fit, Dashboard Package frame, black/white checkered flag background, and all Step 5.5 behavior.
+
 # Step 5.5
 
 - Base: Step 5.4

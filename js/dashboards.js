@@ -23,6 +23,30 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
     return items.length ? `<div class="spec-chips">${items.map(item => `<span>${esc(item)}</span>`).join("")}</div>` : `<span class="muted-inline">General sim racing</span>`;
   }
 
+  function hardwareBadge(item) {
+    if (typeof item === "string") return `<span class="hardware-pill"><b>${esc(item)}</b></span>`;
+    const note = item.note ? ` title="${esc(item.note)}"` : "";
+    const level = esc(item.level || "candidate");
+    return `<span class="hardware-pill"${note}><span class="hardware-status hardware-${level}">${esc(item.label || item.level || "INFO")}</span><b>${esc(item.name)}</b></span>`;
+  }
+
+  function compatibleHardware(d) {
+    const items = d.compatibility?.hardware || [];
+    return items.length ? `<div class="hardware-support-list">${items.map(hardwareBadge).join("")}</div>` : `<span class="muted-inline">Hardware verification pending</span>`;
+  }
+
+  function hardwareCandidates(d) {
+    const items = d.compatibility?.hardwareCandidates || [];
+    if (!items.length) return "";
+    return `<div class="hardware-candidate-block"><span class="muted-inline">Same-display / future candidates — not included as verified support</span><div class="hardware-support-list">${items.map(hardwareBadge).join("")}</div></div>`;
+  }
+
+  function cardHardwareLabel(d) {
+    const supported = (d.compatibility?.hardware || []).filter(h => typeof h === "object" && ["native","shared"].includes(h.level));
+    if (supported.length < 2) return "";
+    return `<span class="meta-pill">${supported.map(h => esc(h.name.replace("MOZA ", ""))).join(" + ")}</span>`;
+  }
+
   function downloadStat(d) {
     return `<span class="download-stat" data-download-count="${esc(d.id)}">Checking downloads…</span>`;
   }
@@ -41,6 +65,7 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
             <span class="meta-pill">${esc(d.resolution)}</span>
             <span class="meta-pill">${d.pages.length} Pages</span>
             <span class="meta-pill">${esc(d.deviceProfile)}</span>
+            ${cardHardwareLabel(d)}
           </div>
           <div class="download-line">${downloadStat(d)}</div>
           <div class="card-actions">
@@ -91,8 +116,9 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
           <div class="detail-specs">
             <div class="spec"><span>Current Version</span><strong>${esc(d.version)}</strong></div>
             <div class="spec"><span>Display</span><strong>${esc(d.resolution)}</strong></div>
-            <div class="spec"><span>Hardware</span><strong>${esc(d.platform)}</strong></div>
+            <div class="spec"><span>Primary Hardware</span><strong>${esc(d.platform)}</strong></div>
             <div class="spec"><span>Pages</span><strong>${d.pages.length}</strong></div>
+            <div class="spec spec-wide"><span>Compatible MOZA Hardware</span>${compatibleHardware(d)}${hardwareCandidates(d)}</div>
             <div class="spec spec-wide"><span>Recommended Driver Level</span><strong>${esc(d.useProfile?.driverLevel || "General")}</strong></div>
             <div class="spec spec-wide"><span>Best For</span>${bestFor(d)}</div>
             <div class="spec spec-wide"><span>Supported / Tested Games</span>${supportedGames(d)}</div>
@@ -171,7 +197,7 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
 
   async function init() {
     try {
-      const response = await fetch("./data/dashboards.json?v=20260827-step5-3", { cache: "no-store" });
+      const response = await fetch("./data/dashboards.json?v=20260827-step5-6", { cache: "no-store" });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const data = await response.json();
       window.BugzilaDashboards.data = data;

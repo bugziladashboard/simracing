@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 4,
+  "schemaVersion": 5,
   "updatedAt": "2026-08-27",
   "site": {
     "name": "Bugzila Sim Racing",
@@ -66,7 +66,18 @@
       ],
       "compatibility": {
         "hardware": [
-          "MOZA KS Pro"
+          {
+            "name": "MOZA KS Pro",
+            "level": "native",
+            "label": "NATIVE",
+            "note": "Primary development and real-device test hardware for this Bugzila dashboard family."
+          },
+          {
+            "name": "MOZA CS Pro",
+            "level": "shared",
+            "label": "OFFICIAL SHARED DASH FORMAT",
+            "note": "MOZA Dash Community publishes the same dashboard entries for both CS Pro and KS Pro. Both products use a 2.99-inch customizable HD display."
+          }
         ],
         "games": [
           {
@@ -95,6 +106,20 @@
             "level": "unverified",
             "label": "NOT TESTED",
             "note": "Release-specific verification pending."
+          }
+        ],
+        "hardwareCandidates": [
+          {
+            "name": "MOZA Mercedes-Benz GT Wheel",
+            "level": "candidate",
+            "label": "2.99-INCH / VERIFY PIXELS",
+            "note": "MOZA lists a 2.99-inch customizable display, but exact pixel resolution and Bugzila .mzdash import compatibility are not yet confirmed."
+          },
+          {
+            "name": "MOZA Ford Mustang GTD Wheel",
+            "level": "candidate",
+            "label": "2.99-INCH / VERIFY PIXELS",
+            "note": "MOZA lists a 2.99-inch customizable display, but exact pixel resolution and Bugzila .mzdash import compatibility are not yet confirmed."
           }
         ]
       },
@@ -170,7 +195,18 @@
       ],
       "compatibility": {
         "hardware": [
-          "MOZA KS Pro"
+          {
+            "name": "MOZA KS Pro",
+            "level": "native",
+            "label": "NATIVE",
+            "note": "Primary development and real-device test hardware for this Bugzila dashboard family."
+          },
+          {
+            "name": "MOZA CS Pro",
+            "level": "shared",
+            "label": "OFFICIAL SHARED DASH FORMAT",
+            "note": "MOZA Dash Community publishes the same dashboard entries for both CS Pro and KS Pro. Both products use a 2.99-inch customizable HD display."
+          }
         ],
         "games": [
           {
@@ -200,6 +236,20 @@
             "level": "unverified",
             "label": "NOT TESTED",
             "note": "Release-specific verification pending."
+          }
+        ],
+        "hardwareCandidates": [
+          {
+            "name": "MOZA Mercedes-Benz GT Wheel",
+            "level": "candidate",
+            "label": "2.99-INCH / VERIFY PIXELS",
+            "note": "MOZA lists a 2.99-inch customizable display, but exact pixel resolution and Bugzila .mzdash import compatibility are not yet confirmed."
+          },
+          {
+            "name": "MOZA Ford Mustang GTD Wheel",
+            "level": "candidate",
+            "label": "2.99-INCH / VERIFY PIXELS",
+            "note": "MOZA lists a 2.99-inch customizable display, but exact pixel resolution and Bugzila .mzdash import compatibility are not yet confirmed."
           }
         ]
       },
@@ -279,7 +329,18 @@
       ],
       "compatibility": {
         "hardware": [
-          "MOZA KS Pro"
+          {
+            "name": "MOZA KS Pro",
+            "level": "native",
+            "label": "NATIVE",
+            "note": "Primary development and real-device test hardware for this Bugzila dashboard family."
+          },
+          {
+            "name": "MOZA CS Pro",
+            "level": "shared",
+            "label": "OFFICIAL SHARED DASH FORMAT",
+            "note": "MOZA Dash Community publishes the same dashboard entries for both CS Pro and KS Pro. Both products use a 2.99-inch customizable HD display."
+          }
         ],
         "games": [
           {
@@ -309,6 +370,20 @@
             "level": "unverified",
             "label": "NOT TESTED",
             "note": "Release-specific verification pending."
+          }
+        ],
+        "hardwareCandidates": [
+          {
+            "name": "MOZA Mercedes-Benz GT Wheel",
+            "level": "candidate",
+            "label": "2.99-INCH / VERIFY PIXELS",
+            "note": "MOZA lists a 2.99-inch customizable display, but exact pixel resolution and Bugzila .mzdash import compatibility are not yet confirmed."
+          },
+          {
+            "name": "MOZA Ford Mustang GTD Wheel",
+            "level": "candidate",
+            "label": "2.99-INCH / VERIFY PIXELS",
+            "note": "MOZA lists a 2.99-inch customizable display, but exact pixel resolution and Bugzila .mzdash import compatibility are not yet confirmed."
           }
         ]
       },
@@ -388,7 +463,12 @@
       ],
       "compatibility": {
         "hardware": [
-          "MOZA CM2 Dashboard"
+          {
+            "name": "MOZA CM2 HD Racing Dash",
+            "level": "native",
+            "label": "NATIVE 1280×720",
+            "note": "Primary development and real-device test hardware for this Bugzila dashboard family."
+          }
         ],
         "games": [
           {
@@ -417,6 +497,14 @@
             "level": "unverified",
             "label": "NOT TESTED",
             "note": "Release-specific verification pending."
+          }
+        ],
+        "hardwareCandidates": [
+          {
+            "name": "MOZA Porsche Mission R Steering Wheel",
+            "level": "candidate-resolution",
+            "label": "720P / NOT VERIFIED",
+            "note": "MOZA specifies a 5.4-inch flexible OLED at 720P/60Hz. The nominal resolution matches the CM2 720P class, but dashboard package/device-profile compatibility has not been verified."
           }
         ]
       },
@@ -496,7 +584,12 @@
       ],
       "compatibility": {
         "hardware": [
-          "MOZA CM2 Dashboard"
+          {
+            "name": "MOZA CM2 HD Racing Dash",
+            "level": "native",
+            "label": "NATIVE 1280×720",
+            "note": "Primary development and real-device test hardware for this Bugzila dashboard family."
+          }
         ],
         "games": [
           {
@@ -526,6 +619,14 @@
             "level": "unverified",
             "label": "NOT TESTED",
             "note": "Release-specific verification pending."
+          }
+        ],
+        "hardwareCandidates": [
+          {
+            "name": "MOZA Porsche Mission R Steering Wheel",
+            "level": "candidate-resolution",
+            "label": "720P / NOT VERIFIED",
+            "note": "MOZA specifies a 5.4-inch flexible OLED at 720P/60Hz. The nominal resolution matches the CM2 720P class, but dashboard package/device-profile compatibility has not been verified."
           }
         ]
       },
