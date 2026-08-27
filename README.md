@@ -1,3 +1,14 @@
+# Step 5.12 — Example Usage + Tags + Setup Guide
+
+Current production package.
+
+- Base: Step 5.11 Ko-fi + PromptPay package.
+- Adds a new **Example Usage** section using the supplied real-hardware photos.
+- Adds important page tags: `#bugziladashboard`, `#bugzilalabs`, `#mozadashboard`, `#simracing`.
+- Adds quick usage guidance for uploading dashboards to **MOZA CM2** and **MOZA KS Pro** through MOZA Pit House.
+- Adds KS Pro page-switch instructions for moving to Page 2 / Page 3 on current multi-page Bugzila layouts.
+- Keeps Ko-fi + PromptPay support, GA4, Community/giscus, download tracking, dashboard catalog, racing flag treatment, Back to Top, and unrelated Step 5.11 behavior.
+
 # Step 5.11 — Ko-fi + PromptPay Support
 
 Current production package.
