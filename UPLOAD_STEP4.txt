@@ -1,0 +1,9 @@
+Bugzila Sim Racing Dashboard Hub — Step 4
+
+Upload all files/folders in this package to the ROOT of:
+https://github.com/bugziladashboard/simracing
+
+Commit suggestion:
+Add community feedback and giscus comments infrastructure
+
+After deployment, follow COMMUNITY_SETUP_GUIDE.md to enable GitHub Discussions and giscus.

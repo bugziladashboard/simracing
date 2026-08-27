@@ -1,0 +1,21 @@
+{
+  "enabled": false,
+  "repo": "bugziladashboard/simracing",
+  "repoId": "",
+  "category": "Dashboard Feedback",
+  "categoryId": "",
+  "mapping": "specific",
+  "strict": "1",
+  "reactionsEnabled": "1",
+  "emitMetadata": "0",
+  "inputPosition": "top",
+  "theme": "dark",
+  "lang": "en",
+  "loading": "lazy",
+  "discussionUrls": {
+    "all": "https://github.com/bugziladashboard/simracing/discussions",
+    "bug": "https://github.com/bugziladashboard/simracing/discussions/new?category=bug-reports",
+    "feature": "https://github.com/bugziladashboard/simracing/discussions/new?category=feature-requests",
+    "qa": "https://github.com/bugziladashboard/simracing/discussions/new?category=q-a"
+  }
+}

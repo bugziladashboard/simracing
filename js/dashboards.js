@@ -103,6 +103,19 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
             <div class="release-list">${history}</div>
           </div>
         </div>
+        <div class="dashboard-community-panel">
+          <div>
+            <p class="eyebrow mini-eyebrow">COMMUNITY FEEDBACK</p>
+            <h3>Used this dashboard?</h3>
+            <p>Share your experience, report a problem or suggest what should be improved next.</p>
+          </div>
+          <div class="dashboard-community-actions">
+            <button class="button primary community-comments-button" type="button" data-dashboard-id="${esc(d.id)}">Comments & Feedback</button>
+            <a class="button secondary community-link" data-community-link="bug" data-dashboard-id="${esc(d.id)}" href="https://github.com/bugziladashboard/simracing/discussions" target="_blank" rel="noopener noreferrer">Report a Bug</a>
+            <a class="button secondary community-link" data-community-link="feature" data-dashboard-id="${esc(d.id)}" href="https://github.com/bugziladashboard/simracing/discussions" target="_blank" rel="noopener noreferrer">Request a Feature</a>
+            <a class="button secondary community-link" data-community-link="qa" data-dashboard-id="${esc(d.id)}" href="https://github.com/bugziladashboard/simracing/discussions" target="_blank" rel="noopener noreferrer">Ask a Question</a>
+          </div>
+        </div>
       </section>`;
   }
 
@@ -157,7 +170,7 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
 
   async function init() {
     try {
-      const response = await fetch("./data/dashboards.json?v=20260827-step3-4", { cache: "no-store" });
+      const response = await fetch("./data/dashboards.json?v=20260827-step4", { cache: "no-store" });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const data = await response.json();
       window.BugzilaDashboards.data = data;
