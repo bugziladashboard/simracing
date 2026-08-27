@@ -1,5 +1,5 @@
 (function () {
-  const CONFIG_URL = "./data/support.json?v=20260827-step5-10";
+  const CONFIG_URL = "./data/support.json?v=20260828-step5-11";
 
   function validHttpUrl(value) {
     try {
@@ -29,7 +29,7 @@
     element.rel = "noopener noreferrer";
     element.removeAttribute("aria-disabled");
     element.classList.remove("is-pending");
-    element.textContent = label === "Ko-fi" ? "Leave a Tip on Ko-fi" : "Support with Stripe";
+    element.textContent = label === "Ko-fi" ? "Open Ko-fi in New Tab" : label;
   }
 
   async function init() {
@@ -41,7 +41,6 @@
 
       if (!config.enabled) return;
       activateLink("support-kofi", config.providers?.koFi, "Ko-fi");
-      activateLink("support-stripe", config.providers?.stripe, "Stripe");
     } catch (error) {
       console.warn("Bugzila Support: unable to load support configuration", error);
     }

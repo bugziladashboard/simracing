@@ -1,14 +1,20 @@
-# Step 5.10 — Support Bugzila
+# Step 5.11 — Ko-fi + PromptPay Support
 
 Current production package.
 
-- Adds a prominent Support Bugzila section immediately after the Hero and before Featured Dashboards.
-- Adds Ko-fi and Stripe support cards.
-- Dashboard downloads remain free; support is optional.
-- Suggested support amount is $2, with user-entered amount supported by the payment provider.
-- Adds GA4 support-payment click tracking.
-- Exact Ko-fi and Stripe URLs are configured in `data/support.json`.
-- Preserves all Step 5.9 functionality.
+- Base: Step 5.10 Support Bugzila package supplied by the user.
+- Keeps dashboard downloads free and support completely optional.
+- Embeds the Bugzila Labs Ko-fi tip panel directly in the Support section.
+- Adds the supplied SCB PromptPay QR image for supporters in Thailand.
+- Removes the standalone card-payment option from the Support section.
+- Updates support wording for Bugzila Labs, international supporters and Thai PromptPay users.
+- Keeps GA4 support-payment click tracking for support links.
+- Ko-fi page: `https://ko-fi.com/bugzilalabs`.
+- Preserves all unrelated Step 5.10 functionality.
+
+# Step 5.10 — Support Bugzila
+
+Historical release. Introduced the Support Bugzila section before the Dashboard catalog.
 
 # Step 5.7
 

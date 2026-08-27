@@ -439,7 +439,7 @@ main, .site-footer { position: relative; z-index: 1; }
   .hardware-status { flex: 0 0 auto; }
 }
 
-/* Step 5.10 — Support Bugzila before Dashboard catalog */
+/* Step 5.11 — Support Bugzila Labs with embedded Ko-fi + Thailand PromptPay */
 .nav-support-link {
   color: #fff !important;
   padding: 7px 12px;
@@ -459,7 +459,7 @@ main, .site-footer { position: relative; z-index: 1; }
   position: relative;
   overflow: hidden;
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+  grid-template-columns: 1fr;
   gap: clamp(24px, 4vw, 54px);
   padding: clamp(26px, 4vw, 46px);
   border: 1px solid #4a515d;
@@ -489,7 +489,7 @@ main, .site-footer { position: relative; z-index: 1; }
   font-weight: 850;
 }
 .support-note { margin: 18px 0 0; color: #c7ced7; font-size: .8rem; }
-.support-payment-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+.support-payment-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(300px, .85fr); gap: 14px; }
 .support-payment-card {
   position: relative;
   display: grid;
@@ -519,8 +519,58 @@ main, .site-footer { position: relative; z-index: 1; }
 .support-payment-card p { margin: 4px 0 0; color: var(--muted); font-size: .82rem; }
 .support-link.is-pending { border: 1px solid var(--line); background: #171a1e; color: #737c88; box-shadow: none; cursor: not-allowed; }
 
+.support-kofi-frame-wrap {
+  grid-column: 1 / -1;
+  overflow: hidden;
+  min-height: 712px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+}
+.support-kofi-embed {
+  display: block;
+  width: 100%;
+  height: 712px;
+  border: 0;
+  background: #fff;
+}
+.support-thai-copy {
+  margin-top: 9px !important;
+  color: #d7dde5 !important;
+  line-height: 1.65;
+}
+.support-promptpay-link {
+  grid-column: 1 / -1;
+  display: block;
+  width: min(100%, 430px);
+  margin: 2px auto 0;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+.support-promptpay-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255,59,48,.65);
+  box-shadow: 0 14px 36px rgba(0,0,0,.22);
+}
+.support-promptpay-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.support-provider-note {
+  grid-column: 1 / -1;
+  margin-top: -4px !important;
+  color: #8e97a3 !important;
+  font-size: .72rem !important;
+}
+
 @media (max-width: 980px) {
   .support-donation-shell { grid-template-columns: 1fr; }
+  .support-payment-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 720px) {
   .mobile-nav-panel .nav-support-link { margin-bottom: 4px; border-color: rgba(255,59,48,.55); background: rgba(255,59,48,.09); }

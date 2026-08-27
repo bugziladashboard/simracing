@@ -6,7 +6,7 @@
   <meta name="description" content="Bugzila Sim Racing — telemetry dashboards for MOZA KS Pro, MOZA CM2 and future SimHub releases.">
   <meta name="theme-color" content="#111317">
   <title>Bugzila Sim Racing Dashboards</title>
-  <link rel="stylesheet" href="./css/dashboards.css?v=20260827-step5-10">
+  <link rel="stylesheet" href="./css/dashboards.css?v=20260828-step5-11">
 </head>
 <body>
   <div class="race-corner race-corner-top-left" aria-hidden="true"></div>
@@ -29,7 +29,7 @@
 
   <div id="mobile-nav" class="mobile-nav" hidden>
     <nav class="mobile-nav-panel" aria-label="Mobile navigation">
-      <a class="nav-support-link" href="#support">Support Bugzila</a>
+      <a class="nav-support-link" href="#support">Support Bugzila Labs</a>
       <a href="#dashboards">Dashboards</a>
       <a href="#updates">Updates</a>
       <a href="#community">Community</a>
@@ -47,7 +47,7 @@
           <p class="hero-copy">Purpose-built telemetry dashboards for sim racers. Clean information, real-time data and layouts designed around real hardware.</p>
           <div class="hero-actions">
             <a class="button primary" href="#dashboards">Explore Dashboards</a>
-            <a class="button support-hero-button" href="#support">Support Bugzila</a>
+            <a class="button support-hero-button" href="#support">Support Bugzila Labs</a>
             <a class="button ghost" href="#car-play">Discover Bugzila Car Play</a>
           </div>
         </div>
@@ -65,34 +65,43 @@
     <section id="support" class="section support-donation-section">
       <div class="support-donation-shell">
         <div class="support-donation-copy">
-          <p class="eyebrow">SUPPORT BUGZILA</p>
-          <h2>Keep the Dashboards Free</h2>
-          <p>Bugzila dashboards are free to download. If they help your sim racing, you can leave an optional tip to support new dashboard layouts, hardware testing and continued development.</p>
+          <p class="eyebrow">SUPPORT BUGZILA LABS</p>
+          <h2>Help Keep Bugzila Dashboards Free</h2>
+          <p>Every Bugzila dashboard remains free to download. If the project is useful to you, an optional contribution helps support new dashboard layouts, hardware testing, maintenance and future releases.</p>
           <div class="support-facts" aria-label="Support information">
-            <span>Free Downloads</span>
-            <span>Suggested $2</span>
-            <span>Any Amount</span>
+            <span>Downloads Stay Free</span>
+            <span>Optional Support</span>
+            <span>Ko-fi + PromptPay</span>
           </div>
-          <p class="support-note">Support is completely optional. No payment is required to download any dashboard.</p>
+          <p class="support-note">No contribution is required to use or download any dashboard. Choose the option that is most convenient for you.</p>
         </div>
         <div class="support-payment-grid" aria-label="Support payment options">
-          <article class="support-payment-card">
+          <article class="support-payment-card support-payment-card-kofi">
             <div class="support-payment-number">01</div>
             <div>
-              <p class="support-payment-kicker">QUICK TIP</p>
+              <p class="support-payment-kicker">INTERNATIONAL SUPPORT</p>
               <h3>Ko-fi</h3>
-              <p>Leave a quick tip through Ko-fi using the amount that works for you.</p>
+              <p>Support Bugzila Labs directly from the embedded Ko-fi panel below, or open the Ko-fi page in a new tab.</p>
             </div>
             <a id="support-kofi" class="button primary support-link is-pending" data-support-provider="ko-fi" href="#" aria-disabled="true">Ko-fi Link Pending</a>
+            <div class="support-kofi-frame-wrap">
+              <iframe id="support-kofi-embed" class="support-kofi-embed" src="https://ko-fi.com/bugzilalabs/?hidefeed=true&amp;widget=true&amp;embed=true&amp;preview=true" title="Support Bugzila Labs on Ko-fi" loading="lazy"></iframe>
+            </div>
+            <p class="support-provider-note">The embedded payment panel is provided directly by Ko-fi.</p>
           </article>
-          <article class="support-payment-card">
+
+          <article class="support-payment-card support-payment-card-promptpay">
             <div class="support-payment-number">02</div>
             <div>
-              <p class="support-payment-kicker">SECURE PAYMENT</p>
-              <h3>Stripe</h3>
-              <p>Support development with a secure card payment processed by Stripe.</p>
+              <p class="support-payment-kicker">THAILAND</p>
+              <h3>PromptPay</h3>
+              <p>For supporters in Thailand, scan the PromptPay QR code below and enter any amount you would like to contribute.</p>
+              <p class="support-thai-copy" lang="th">สำหรับผู้สนับสนุนในประเทศไทย สามารถสแกน QR PromptPay ด้านล่าง แล้วระบุจำนวนเงินที่ต้องการสนับสนุนได้ตามสะดวก</p>
             </div>
-            <a id="support-stripe" class="button secondary support-link is-pending" data-support-provider="stripe" href="#" aria-disabled="true">Stripe Link Pending</a>
+            <a class="support-promptpay-link support-link" data-support-provider="promptpay" href="./assets/common/bugzila-promptpay-scb.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open PromptPay QR code full size">
+              <img class="support-promptpay-image" src="./assets/common/bugzila-promptpay-scb.jpg" alt="SCB PromptPay QR code for supporting Bugzila Labs in Thailand" loading="lazy">
+            </a>
+            <p class="support-provider-note">Tap the QR code to open the full-size image.</p>
           </article>
         </div>
       </div>
@@ -180,7 +189,7 @@
   <script src="./js/downloads.js?v=20260827-step5-10" defer></script>
   <script src="./js/community.js?v=20260827-step5-10" defer></script>
   <script src="./js/analytics.js?v=20260827-step5-10" defer></script>
-  <script src="./js/support.js?v=20260827-step5-10" defer></script>
+  <script src="./js/support.js?v=20260828-step5-11" defer></script>
   <script src="./js/ui.js?v=20260827-step5-10" defer></script>
 </body>
 </html>

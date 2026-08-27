@@ -1,17 +1,17 @@
 {
   "enabled": true,
   "brand": "Bugzila Labs",
-  "suggestedAmountUsd": 2,
-  "minimumConceptUsd": 1,
   "downloadsRemainFree": true,
   "providers": {
     "koFi": {
       "enabled": true,
-      "url": ""
+      "url": "https://ko-fi.com/bugzilalabs",
+      "embedUrl": "https://ko-fi.com/bugzilalabs/?hidefeed=true&widget=true&embed=true&preview=true"
     },
-    "stripe": {
+    "promptPay": {
       "enabled": true,
-      "url": ""
+      "region": "TH",
+      "image": "./assets/common/bugzila-promptpay-scb.jpg"
     }
   }
 }
