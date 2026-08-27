@@ -1,3 +1,9 @@
+# Step 5.5
+
+- Base: Step 5.4
+- Change: replace the decorative racing-flag background with a custom black-and-white checkered flag style that looks closer to a waving motorsport flag.
+- Preserved: GA4, Community, giscus, download tracking, hamburger menu, mobile fit, dashboard package frame, and all Step 5.4 features.
+
 # Step 5.4
 
 - Base: Step 5.3
