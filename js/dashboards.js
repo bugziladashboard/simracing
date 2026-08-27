@@ -107,10 +107,10 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
           <div>
             <p class="eyebrow mini-eyebrow">COMMUNITY FEEDBACK</p>
             <h3>Used this dashboard?</h3>
-            <p>Share your experience, report a problem or suggest what should be improved next.</p>
+            <p>Leave a quick comment, or open a dedicated discussion for bugs, feature requests and questions.</p>
           </div>
           <div class="dashboard-community-actions">
-            <button class="button primary community-comments-button" type="button" data-dashboard-id="${esc(d.id)}">Comments & Feedback</button>
+            <button class="button primary community-comments-button" type="button" data-dashboard-id="${esc(d.id)}">Quick Comments</button>
             <a class="button secondary community-link" data-community-link="bug" data-dashboard-id="${esc(d.id)}" href="https://github.com/bugziladashboard/simracing/discussions" target="_blank" rel="noopener noreferrer">Report a Bug</a>
             <a class="button secondary community-link" data-community-link="feature" data-dashboard-id="${esc(d.id)}" href="https://github.com/bugziladashboard/simracing/discussions" target="_blank" rel="noopener noreferrer">Request a Feature</a>
             <a class="button secondary community-link" data-community-link="qa" data-dashboard-id="${esc(d.id)}" href="https://github.com/bugziladashboard/simracing/discussions" target="_blank" rel="noopener noreferrer">Ask a Question</a>

@@ -1,7 +1,7 @@
 window.BugzilaCommunity = window.BugzilaCommunity || {};
 
 (function () {
-  const CONFIG_URL = "./data/community.json?v=20260827-step4-1";
+  const CONFIG_URL = "./data/community.json?v=20260827-step4-2";
   let config = null;
   let dashboards = [];
 
@@ -39,6 +39,13 @@ window.BugzilaCommunity = window.BugzilaCommunity || {};
       setupPending(container);
       return;
     }
+
+    const guide = document.createElement("div");
+    guide.className = "quick-comment-guide";
+    guide.innerHTML = `
+      <strong>Quick Comments</strong>
+      <span>Best for short feedback, impressions and usage notes. For a bug that needs follow-up, a feature idea or a support question, use the dedicated GitHub Discussion buttons above.</span>`;
+    container.appendChild(guide);
 
     const mount = document.createElement("div");
     mount.className = "giscus";
@@ -88,8 +95,8 @@ window.BugzilaCommunity = window.BugzilaCommunity || {};
     const dashboard = dashboardById(dashboardId);
     const modal = document.getElementById("community-modal");
     if (!dashboard || !modal) return;
-    document.getElementById("community-modal-title").textContent = dashboard.title;
-    document.getElementById("community-modal-copy").textContent = `Comments stay attached to the ${dashboard.family} family so feedback continues across future versions.`;
+    document.getElementById("community-modal-title").textContent = `Quick Comments — ${dashboard.title}`;
+    document.getElementById("community-modal-copy").textContent = `Share short feedback, impressions or usage notes for ${dashboard.title}. Comments stay attached to the ${dashboard.family} family across future versions. Use Report a Bug, Request a Feature or Ask a Question when the topic needs a dedicated GitHub Discussion.`;
     modalActions(dashboard);
     mountGiscus(dashboard);
     modal.showModal();
@@ -98,7 +105,16 @@ window.BugzilaCommunity = window.BugzilaCommunity || {};
   function wireLinks() {
     document.querySelectorAll(".community-link").forEach((link) => {
       const type = link.dataset.communityLink;
-      if (config?.discussionUrls?.[type]) link.href = config.discussionUrls[type];
+      let href = config?.discussionUrls?.[type];
+      if (!href) return;
+      const dashboard = dashboardById(link.dataset.dashboardId);
+      if (dashboard && href.includes("?")) {
+        const title = encodeURIComponent(`${dashboard.title} ${dashboard.version}`);
+        href += `&title=${title}`;
+      }
+      link.href = href;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
     });
   }
 

@@ -1,0 +1,10 @@
+STEP 4.2 — COMMUNITY UX POLISH
+
+Upload all files/folders in this package to the ROOT of:
+https://github.com/bugziladashboard/simracing
+
+Replace existing files when prompted.
+Suggested commit message:
+Polish community UX and add racing page controls
+
+After GitHub Pages deployment completes, open the site and perform Ctrl+F5 once.

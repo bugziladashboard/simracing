@@ -6,9 +6,11 @@
   <meta name="description" content="Bugzila Sim Racing — telemetry dashboards for MOZA KS Pro, MOZA CM2 and future SimHub releases.">
   <meta name="theme-color" content="#111317">
   <title>Bugzila Sim Racing Dashboards</title>
-  <link rel="stylesheet" href="./css/dashboards.css?v=20260827-step4">
+  <link rel="stylesheet" href="./css/dashboards.css?v=20260827-step4-2">
 </head>
 <body>
+  <div class="race-corner race-corner-top-left" aria-hidden="true"></div>
+  <div class="race-corner race-corner-bottom-right" aria-hidden="true"></div>
   <header class="site-header">
     <a class="brand" href="./" aria-label="Bugzila Dashboard home"><img class="brand-logo" src="./assets/common/bugzila-dashboard-logo.png" alt="Bugzila Dashboard BZD logo"></a>
     <nav class="site-nav" aria-label="Primary navigation">
@@ -84,10 +86,10 @@
           <p class="eyebrow">COMMUNITY</p>
           <h2>Feedback & Comments</h2>
         </div>
-        <p>Share real-world experience, report issues and suggest improvements. Dashboard comments stay connected to each dashboard family as new versions are released.</p>
+        <p>Use Quick Comments for short feedback and impressions. Open a dedicated GitHub Discussion when you need bug tracking, a feature request or a support answer.</p>
       </div>
       <div class="community-overview-grid">
-        <article class="community-card"><span>01</span><h3>Dashboard Feedback</h3><p>Share how a dashboard performs on your hardware and in your sim.</p></article>
+        <article class="community-card"><span>01</span><h3>Quick Comments</h3><p>Leave short feedback, impressions and real-world usage notes without leaving the Dashboard Hub.</p></article>
         <article class="community-card"><span>02</span><h3>Bug Reports</h3><p>Report telemetry, display or compatibility issues with enough detail to reproduce them.</p></article>
         <article class="community-card"><span>03</span><h3>Feature Requests</h3><p>Suggest new pages, telemetry fields, layouts, platforms or usability improvements.</p></article>
         <article class="community-card"><span>04</span><h3>Q&A</h3><p>Ask installation, compatibility and usage questions for the community.</p></article>
@@ -123,12 +125,14 @@
     <span>© 2026 Bugzila.</span>
   </footer>
 
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top"><span aria-hidden="true">↑</span><b>Top</b></button>
+
   <dialog id="community-modal" class="community-modal">
     <button class="modal-close community-close" type="button" aria-label="Close community feedback">×</button>
     <div class="community-modal-head">
       <p class="eyebrow">COMMUNITY FEEDBACK</p>
-      <h2 id="community-modal-title">Dashboard Feedback</h2>
-      <p id="community-modal-copy">Comments are powered by GitHub Discussions.</p>
+      <h2 id="community-modal-title">Quick Comments &amp; Feedback</h2>
+      <p id="community-modal-copy">Leave short feedback here. Use the dedicated buttons below when a topic needs its own GitHub Discussion.</p>
     </div>
     <div id="community-modal-actions" class="community-actions"></div>
     <div id="giscus-container" class="giscus-shell"></div>
@@ -140,9 +144,10 @@
     <p id="modal-caption"></p>
   </dialog>
 
-  <script src="./js/dashboards.js?v=20260827-step4" defer></script>
-  <script src="./js/downloads.js?v=20260827-step4" defer></script>
-  <script src="./js/community.js?v=20260827-step4-1" defer></script>
-  <script src="./js/analytics.js?v=20260827-step4" defer></script>
+  <script src="./js/dashboards.js?v=20260827-step4-2" defer></script>
+  <script src="./js/downloads.js?v=20260827-step4-2" defer></script>
+  <script src="./js/community.js?v=20260827-step4-2" defer></script>
+  <script src="./js/analytics.js?v=20260827-step4-2" defer></script>
+  <script src="./js/ui.js?v=20260827-step4-2" defer></script>
 </body>
 </html>

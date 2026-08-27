@@ -1,15 +1,12 @@
-# Bugzila Sim Racing Dashboard Hub — Step 4.1
+# Bugzila Sim Racing Dashboard Hub — Step 4.2
 
-Live giscus comments are activated for `bugziladashboard/simracing`.
+Community UX polish release.
 
-- Repository ID: `R_kgDOUE9MRQ`
-- Category: `Dashboard Feedback`
-- Category ID: `DIC_kwDOUE9MRc4DERzY`
-- Mapping: `specific`
-- Comment term: stable Dashboard Family ID (`moza-ks-pro-v3`, `moza-ks-pro-v2`, etc.)
-- Theme: GitHub Dark
-- Language: English
-
-Each dashboard family keeps one continuous discussion thread across future releases in that family.
-
-Upload the contents of this package to the repository root and overwrite the Step 4 files.
+Changes:
+- Renames the embedded giscus action to **Quick Comments** and explains when to use it.
+- Keeps **Report a Bug**, **Request a Feature**, and **Ask a Question** as dedicated GitHub Discussions opened in a new tab.
+- Prefills the dashboard/version in dedicated Discussion titles.
+- Adds subtle fading checkered-flag graphics to the top-left and bottom-right page corners.
+- Adds a floating **Top** button with smooth scroll.
+- Keeps the permanent hero phrase **BUILT FOR THE TRACK.**
+- Keeps live giscus configuration for `bugziladashboard/simracing`.
