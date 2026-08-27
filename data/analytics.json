@@ -11,6 +11,7 @@
     "communityDiscussion": true,
     "googlePlay": true,
     "screenshotPreview": true,
-    "backToTop": true
+    "backToTop": true,
+    "supportClick": true
   }
 }

@@ -1,3 +1,15 @@
+# Step 5.10 — Support Bugzila
+
+Current production package.
+
+- Adds a prominent Support Bugzila section immediately after the Hero and before Featured Dashboards.
+- Adds Ko-fi and Stripe support cards.
+- Dashboard downloads remain free; support is optional.
+- Suggested support amount is $2, with user-entered amount supported by the payment provider.
+- Adds GA4 support-payment click tracking.
+- Exact Ko-fi and Stripe URLs are configured in `data/support.json`.
+- Preserves all Step 5.9 functionality.
+
 # Step 5.7
 
 - Base: Step 5.6 MOZA Hardware Compatibility.

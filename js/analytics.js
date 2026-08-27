@@ -1,7 +1,7 @@
 window.BugzilaAnalytics = window.BugzilaAnalytics || {};
 
 (function () {
-  const CONFIG_URL = "./data/analytics.json?v=20260827-step5-2";
+  const CONFIG_URL = "./data/analytics.json?v=20260827-step5-10";
   let config = null;
   let ready = false;
 
@@ -86,6 +86,17 @@ window.BugzilaAnalytics = window.BugzilaAnalytics || {};
         track("community_discussion_open", {
           ...dashboardParams(dashboard),
           discussion_type: discussion.dataset.communityLink || "discussion"
+        });
+        return;
+      }
+
+
+      const support = event.target.closest(".support-link");
+      if (support && support.getAttribute("aria-disabled") !== "true" && config?.events?.supportClick !== false) {
+        track("support_payment_click", {
+          provider: support.dataset.supportProvider || "support",
+          link_url: support.href,
+          link_text: support.textContent?.trim() || "Support Bugzila"
         });
         return;
       }

@@ -1,0 +1,17 @@
+{
+  "enabled": true,
+  "brand": "Bugzila Labs",
+  "suggestedAmountUsd": 2,
+  "minimumConceptUsd": 1,
+  "downloadsRemainFree": true,
+  "providers": {
+    "koFi": {
+      "enabled": true,
+      "url": ""
+    },
+    "stripe": {
+      "enabled": true,
+      "url": ""
+    }
+  }
+}
