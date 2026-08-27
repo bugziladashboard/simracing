@@ -6,11 +6,11 @@
   <meta name="description" content="Bugzila Sim Racing — telemetry dashboards for MOZA KS Pro, MOZA CM2 and future SimHub releases.">
   <meta name="theme-color" content="#111317">
   <title>Bugzila Sim Racing Dashboards</title>
-  <link rel="stylesheet" href="./css/dashboards.css?v=20260826-step3-1">
+  <link rel="stylesheet" href="./css/dashboards.css?v=20260827-step3-4">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="./" aria-label="Bugzila Sim Racing home"><span class="brand-mark">B</span><span>BUGZILA</span></a>
+    <a class="brand" href="./" aria-label="Bugzila Dashboard home"><img class="brand-logo" src="./assets/common/bugzila-dashboard-logo.png" alt="Bugzila Dashboard BZD logo"></a>
     <nav class="site-nav" aria-label="Primary navigation">
       <a href="#dashboards">Dashboards</a>
       <a href="#updates">Updates</a>
@@ -25,6 +25,7 @@
       <div class="hero-grid">
         <div>
           <p class="eyebrow">SIM RACING DASHBOARD HUB</p>
+          <!-- BRAND LOCK: Keep “BUILT FOR THE TRACK.” as the permanent hero phrase unless the owner explicitly requests a change. -->
           <h1>Built for<br><span>the track.</span></h1>
           <p class="hero-copy">Purpose-built telemetry dashboards for sim racers. Clean information, real-time data and layouts designed around real hardware.</p>
           <div class="hero-actions">
@@ -34,7 +35,7 @@
         </div>
         <div class="telemetry-panel" aria-label="Dashboard hub summary">
           <div class="telemetry-top"><span>BUGZILA // DASHBOARD HUB</span><span class="live-dot">ONLINE</span></div>
-          <div class="telemetry-main"><strong id="hero-dashboard-count">3</strong><span>CURRENT RELEASES</span></div>
+          <div class="telemetry-main"><strong id="hero-dashboard-count">5</strong><span>CURRENT RELEASES</span></div>
           <div id="hero-release-rows"></div>
           <div class="telemetry-row"><span>SIMHUB</span><b class="muted-value">COMING</b></div>
           <div class="telemetry-downloads"><span>TOTAL DASHBOARD DOWNLOADS</span><strong id="hero-total-downloads">—</strong></div>
@@ -69,18 +70,22 @@
           <p class="eyebrow">HARDWARE & GAMES</p>
           <h2>Compatibility</h2>
         </div>
-        <p>Compatibility is shown conservatively. A game is marked Verified only when the current project has confirmed real-device testing.</p>
+        <p>Game compatibility is shown conservatively. Verified means confirmed real-device testing; Expected means MOZA telemetry compatibility is anticipated but release-specific verification is still pending.</p>
       </div>
       <div id="compatibility-table" class="table-wrap"></div>
-      <div id="status-legend" class="status-legend"></div>
+      <div class="legend-block"><p class="eyebrow mini-eyebrow">GAME STATUS</p><div id="compatibility-legend" class="status-legend"></div></div>
+      <div class="legend-block"><p class="eyebrow mini-eyebrow">RELEASE STATUS</p><div id="status-legend" class="status-legend"></div></div>
     </section>
 
     <section id="car-play" class="section app-promo">
-      <div class="app-copy">
-        <p class="eyebrow">MORE FROM BUGZILA</p>
-        <h2>Bugzila Car Play</h2>
-        <p>Music and radio designed for the road. Enjoy Local Music, Online Radio and Android Auto in one focused driving experience.</p>
-        <div class="feature-chips"><span>Local Music</span><span>Online Radio</span><span>Android Auto</span></div>
+      <div class="app-promo-brand">
+        <img class="app-icon" src="./assets/common/bugzila-car-play-icon.png" alt="Bugzila Car Play application icon" loading="lazy">
+        <div class="app-copy">
+          <p class="eyebrow">MORE FROM BUGZILA</p>
+          <h2>Bugzila Car Play</h2>
+          <p>Music and radio designed for the road. Enjoy Local Music, Online Radio and Android Auto in one focused driving experience.</p>
+          <div class="feature-chips"><span>Local Music</span><span>Online Radio</span><span>Android Auto</span></div>
+        </div>
       </div>
       <a class="button google-play" href="https://play.google.com/store/apps/details?id=com.bugzilacarplay.app" target="_blank" rel="noopener noreferrer">Get it on Google Play</a>
     </section>
@@ -106,8 +111,8 @@
     <p id="modal-caption"></p>
   </dialog>
 
-  <script src="./js/dashboards.js?v=20260826-step3-1" defer></script>
-  <script src="./js/downloads.js?v=20260826-step3-1" defer></script>
-  <script src="./js/analytics.js?v=20260826-step3-1" defer></script>
+  <script src="./js/dashboards.js?v=20260827-step3-4" defer></script>
+  <script src="./js/downloads.js?v=20260827-step3-4" defer></script>
+  <script src="./js/analytics.js?v=20260827-step3-4" defer></script>
 </body>
 </html>

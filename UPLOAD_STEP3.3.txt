@@ -1,0 +1,10 @@
+BUGZILA SIM RACING — STEP 3.3
+
+Upload the CONTENTS of this package to the repository root:
+https://github.com/bugziladashboard/simracing
+
+Suggested commit message:
+Add MOZA KS Pro V2.P1.005 dashboard
+
+After GitHub Pages deployment completes, hard refresh the site.
+The Hero phrase BUILT FOR THE TRACK. is intentionally retained as a permanent brand element.

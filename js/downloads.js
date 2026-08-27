@@ -1,7 +1,7 @@
 window.BugzilaDashboards = window.BugzilaDashboards || {};
 
 (function () {
-  const CACHE_KEY = "bugzila-release-stats-v2";
+  const CACHE_KEY = "bugzila-release-stats-v3";
   const CACHE_TTL_MS = 10 * 60 * 1000;
   const POST_DOWNLOAD_REFRESH_MS = 5000;
   let lastData = null;

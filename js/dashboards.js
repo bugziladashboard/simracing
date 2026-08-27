@@ -5,6 +5,24 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
   const statusBadge = (status) => `<span class="status-badge ${statusClass(status)}">${status}</span>`;
   const esc = (value = "") => String(value).replace(/[&<>"]/g, (ch) => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[ch]));
 
+  const gameLabel = (g) => g.label || String(g.level || "unverified").replace(/-/g, " ").toUpperCase();
+  const gameTag = (g, showFullName = false) => {
+    const title = g.note ? ` title="${esc(g.note)}"` : "";
+    const name = showFullName ? g.name : (g.short || g.name);
+    return `<span class="game-pill"${title}><span class="compat-tag compat-${esc(g.level)}">${esc(gameLabel(g))}</span><b>${esc(name)}</b></span>`;
+  };
+
+  function supportedGames(d) {
+    const games = d.compatibility?.games || [];
+    if (!games.length) return `<span class="muted-inline">Verification pending</span>`;
+    return `<div class="game-support-list">${games.map(g => gameTag(g)).join("")}</div>`;
+  }
+
+  function bestFor(d) {
+    const items = d.useProfile?.bestFor || [];
+    return items.length ? `<div class="spec-chips">${items.map(item => `<span>${esc(item)}</span>`).join("")}</div>` : `<span class="muted-inline">General sim racing</span>`;
+  }
+
   function downloadStat(d) {
     return `<span class="download-stat" data-download-count="${esc(d.id)}">Checking downloads…</span>`;
   }
@@ -64,6 +82,9 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
             <div class="spec"><span>Display</span><strong>${esc(d.resolution)}</strong></div>
             <div class="spec"><span>Hardware</span><strong>${esc(d.platform)}</strong></div>
             <div class="spec"><span>Pages</span><strong>${d.pages.length}</strong></div>
+            <div class="spec spec-wide"><span>Recommended Driver Level</span><strong>${esc(d.useProfile?.driverLevel || "General")}</strong></div>
+            <div class="spec spec-wide"><span>Best For</span>${bestFor(d)}</div>
+            <div class="spec spec-wide"><span>Supported / Tested Games</span>${supportedGames(d)}</div>
           </div>
         </div>
 
@@ -95,15 +116,21 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
   function compatibility(dashboards) {
     const rows = dashboards.map(d => {
       const games = d.compatibility.games.length
-        ? d.compatibility.games.map(g => `<div><span class="compat-tag compat-${esc(g.level)}">${esc(g.level)}</span> ${esc(g.name)}${g.note ? `<br><small>${esc(g.note)}</small>` : ""}</div>`).join("<br>")
-        : `<span class="compat-tag compat-unverified">Not listed</span> <span>Game verification will be added after confirmed testing.</span>`;
-      return `<tr><td><strong>${esc(d.family)}</strong><br><small>${esc(d.version)}</small></td><td>${esc(d.platform)}</td><td>${esc(d.resolution)}</td><td>${games}</td></tr>`;
+        ? d.compatibility.games.map(g => `<div class="compat-game-row"><span class="compat-tag compat-${esc(g.level)}">${esc(gameLabel(g))}</span> <strong>${esc(g.short || g.name)}</strong> <span>${esc(g.name)}</span>${g.note ? `<br><small>${esc(g.note)}</small>` : ""}</div>`).join("")
+        : `<span class="compat-tag compat-unverified">NOT TESTED</span> <span>Game verification will be added after confirmed testing.</span>`;
+      const recommendedUse = `<strong>${esc(d.useProfile?.driverLevel || "General")}</strong><br><small>${esc((d.useProfile?.bestFor || []).join(" · "))}</small>`;
+      return `<tr><td><strong>${esc(d.family)}</strong><br><small>${esc(d.version)}</small></td><td>${esc(d.platform)}</td><td>${esc(d.resolution)}</td><td>${recommendedUse}</td><td>${games}</td></tr>`;
     }).join("");
-    return `<table class="compat-table"><thead><tr><th>Dashboard</th><th>Hardware</th><th>Resolution</th><th>Verified Game Compatibility</th></tr></thead><tbody>${rows}</tbody></table>`;
+    return `<table class="compat-table"><thead><tr><th>Dashboard</th><th>Hardware</th><th>Resolution</th><th>Recommended Use</th><th>Game Compatibility</th></tr></thead><tbody>${rows}</tbody></table>`;
   }
 
   function legend(defs) {
     return Object.entries(defs).map(([key, value]) => `<div class="legend-item">${statusBadge(key)}<span>${esc(value)}</span></div>`).join("");
+  }
+
+  function gameLegend(defs) {
+    const labels = { verified: "VERIFIED", tested: "TESTED", expected: "EXPECTED", partial: "PARTIAL", unverified: "NOT TESTED" };
+    return Object.entries(defs || {}).map(([key, value]) => `<div class="legend-item"><span class="compat-tag compat-${esc(key)}">${esc(labels[key] || key.replace(/-/g, " "))}</span><span>${esc(value)}</span></div>`).join("");
   }
 
   function heroRows(dashboards) {
@@ -130,7 +157,7 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
 
   async function init() {
     try {
-      const response = await fetch("./data/dashboards.json?v=20260826-step3", { cache: "no-store" });
+      const response = await fetch("./data/dashboards.json?v=20260827-step3-4", { cache: "no-store" });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const data = await response.json();
       window.BugzilaDashboards.data = data;
@@ -141,6 +168,7 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
       document.getElementById("dashboard-details").innerHTML = data.dashboards.map(dashboardDetail).join("");
       document.getElementById("updates-list").innerHTML = updates(data.dashboards);
       document.getElementById("compatibility-table").innerHTML = compatibility(data.dashboards);
+      document.getElementById("compatibility-legend").innerHTML = gameLegend(data.gameStatusDefinitions);
       document.getElementById("status-legend").innerHTML = legend(data.statusDefinitions);
       setupModal();
       document.dispatchEvent(new CustomEvent("bugzila:dashboards-ready", { detail: data }));

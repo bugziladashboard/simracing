@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 3,
-  "updatedAt": "2026-08-26",
+  "schemaVersion": 4,
+  "updatedAt": "2026-08-27",
   "site": {
     "name": "Bugzila Sim Racing",
     "tagline": "Telemetry dashboards built for the track.",
@@ -8,7 +8,8 @@
     "googlePlay": "https://play.google.com/store/apps/details?id=com.bugzilacarplay.app",
     "githubOwner": "bugziladashboard",
     "githubRepo": "simracing",
-    "githubApiReleases": "https://api.github.com/repos/bugziladashboard/simracing/releases?per_page=100"
+    "githubApiReleases": "https://api.github.com/repos/bugziladashboard/simracing/releases?per_page=100",
+    "heroTagline": "BUILT FOR THE TRACK."
   },
   "statusDefinitions": {
     "latest": "Newest published version in this dashboard family.",
@@ -70,7 +71,30 @@
         "games": [
           {
             "name": "Assetto Corsa Competizione",
-            "level": "verified"
+            "short": "ACC",
+            "level": "verified",
+            "label": "VERIFIED"
+          },
+          {
+            "name": "Assetto Corsa",
+            "short": "AC",
+            "level": "tested",
+            "label": "TESTED",
+            "note": "Tested on KS Pro; title-specific telemetry fields may vary."
+          },
+          {
+            "name": "Assetto Corsa EVO",
+            "short": "AC EVO",
+            "level": "tested",
+            "label": "TESTED",
+            "note": "Tested on KS Pro; title-specific telemetry fields may vary."
+          },
+          {
+            "name": "Le Mans Ultimate",
+            "short": "LMU",
+            "level": "unverified",
+            "label": "NOT TESTED",
+            "note": "Release-specific verification pending."
           }
         ]
       },
@@ -87,18 +111,6 @@
           "status": [
             "legacy"
           ]
-        },
-        {
-          "version": "V2.P1.005",
-          "status": [
-            "legacy"
-          ]
-        },
-        {
-          "version": "V1.P3.010",
-          "status": [
-            "legacy"
-          ]
         }
       ],
       "download": {
@@ -107,7 +119,225 @@
         "releaseAssetUrl": "https://github.com/bugziladashboard/simracing/releases/download/ks-pro-v3.p3.006/Bugzila_Dashboard_V3.P3.006.mzdash",
         "releasePageUrl": "https://github.com/bugziladashboard/simracing/releases/tag/ks-pro-v3.p3.006"
       },
-      "heroLabel": "MOZA KS PRO"
+      "heroLabel": "MOZA KS PRO V3",
+      "useProfile": {
+        "driverLevel": "Intermediate to Professional-oriented",
+        "bestFor": [
+          "Driver Development",
+          "Trail Braking Practice",
+          "Lap Analysis",
+          "Track Experience"
+        ]
+      }
+    },
+    {
+      "id": "moza-ks-pro-v2",
+      "family": "Bugzila Dashboard V2",
+      "title": "Bugzila Dashboard V2.P1.005",
+      "platform": "MOZA KS Pro",
+      "deviceProfile": "W18 Display",
+      "hardwareVersion": "RS21-W18-HW RGB-DU-V11",
+      "resolution": "780 × 248",
+      "version": "V2.P1.005",
+      "releaseDate": "2026-08-27",
+      "status": [
+        "latest",
+        "stable"
+      ],
+      "summary": "A single-page race dashboard that keeps the track map, session position, lap data, gear, RPM and key car settings visible at the same time.",
+      "concept": "Deliver an all-in-one race overview on the compact KS Pro display so the driver can read track position, session information and core setup values without changing pages.",
+      "previewVersion": "V2.P1.005",
+      "previewNote": "Screenshot is from the current V2.P1.005 dashboard package supplied for MOZA KS Pro.",
+      "features": [
+        "Single-Page Layout",
+        "2D Track Map",
+        "Session Time",
+        "Position & Lap",
+        "Gap Display",
+        "Gear & Engine RPM",
+        "TC & ABS Levels",
+        "Engine Map",
+        "Fuel Information",
+        "Fuel Use / Lap",
+        "Quick Race Metrics"
+      ],
+      "pages": [
+        {
+          "name": "Page 1 — Single-Page Race Overview",
+          "description": "Track map, session time, position, lap, gap, gear, RPM and quick-access race values including TC, ABS, map and fuel information.",
+          "image": "./assets/ks-pro-v2/ks-pro-v2-page-1.png"
+        }
+      ],
+      "compatibility": {
+        "hardware": [
+          "MOZA KS Pro"
+        ],
+        "games": [
+          {
+            "name": "Assetto Corsa Competizione",
+            "short": "ACC",
+            "level": "expected",
+            "label": "EXPECTED",
+            "note": "Designed around MOZA telemetry; V2-specific real-device verification is pending."
+          },
+          {
+            "name": "Assetto Corsa",
+            "short": "AC",
+            "level": "expected",
+            "label": "EXPECTED",
+            "note": "MOZA telemetry compatibility expected; V2-specific verification is pending."
+          },
+          {
+            "name": "Assetto Corsa EVO",
+            "short": "AC EVO",
+            "level": "expected",
+            "label": "EXPECTED",
+            "note": "MOZA telemetry compatibility expected; V2-specific verification is pending."
+          },
+          {
+            "name": "Le Mans Ultimate",
+            "short": "LMU",
+            "level": "unverified",
+            "label": "NOT TESTED",
+            "note": "Release-specific verification pending."
+          }
+        ]
+      },
+      "releaseHistory": [
+        {
+          "version": "V2.P1.005",
+          "status": [
+            "latest",
+            "stable"
+          ]
+        }
+      ],
+      "download": {
+        "releaseTag": "ks-pro-v2.p1.005",
+        "fileName": "Bugzila_Dashboard_V2.P1.005.mzdash",
+        "releaseAssetUrl": "https://github.com/bugziladashboard/simracing/releases/download/ks-pro-v2.p1.005/Bugzila_Dashboard_V2.P1.005.mzdash",
+        "releasePageUrl": "https://github.com/bugziladashboard/simracing/releases/tag/ks-pro-v2.p1.005"
+      },
+      "heroLabel": "MOZA KS PRO V2",
+      "useProfile": {
+        "driverLevel": "Amateur to Intermediate",
+        "bestFor": [
+          "Track Experience",
+          "Race Overview",
+          "Sprint Sessions",
+          "Minimal Page Switching"
+        ]
+      }
+    },
+    {
+      "id": "moza-ks-pro-v1",
+      "family": "Bugzila Dashboard V1",
+      "title": "Bugzila Dashboard V1.P3.010",
+      "platform": "MOZA KS Pro",
+      "deviceProfile": "W18 Display",
+      "hardwareVersion": "RS21-W18-HW RGB-DU-V11",
+      "resolution": "780 × 248",
+      "version": "V1.P3.010",
+      "releaseDate": "2026-08-27",
+      "status": [
+        "latest",
+        "stable"
+      ],
+      "summary": "A three-page race-engineer style dashboard focused on track awareness, tyre condition, race timing, fuel strategy and fast-access car setup.",
+      "concept": "Split race information into three focused screens: track and race awareness, tyre and timing management, then fuel strategy and core car setup values for quick decisions while driving.",
+      "previewVersion": "V1.P3.010",
+      "previewNote": "Screenshots are from the current V1.P3.010 dashboard package supplied for MOZA KS Pro.",
+      "features": [
+        "2D GPS Track Map",
+        "Player & Opponent Map",
+        "Race Status",
+        "Position / Lap / Pit",
+        "Live Event Status",
+        "Tyre Pressure & Temperature",
+        "Tyre Condition",
+        "Current / Last / Best Lap",
+        "Fuel Laps & Remaining Fuel",
+        "Fuel Use / Lap",
+        "TC / ABS / Brake Bias / Engine Map"
+      ],
+      "pages": [
+        {
+          "name": "Page 1 — GPS Map + Race Status",
+          "description": "2D GPS track map with player/opponent markers, race status, position, lap, fuel laps, pit information and live-event status.",
+          "image": "./assets/ks-pro-v1/ks-pro-v1-page-1.png"
+        },
+        {
+          "name": "Page 2 — Tyre State + Race Time",
+          "description": "Top-view tyre state with pressure, temperature and condition, plus current, last and best lap timing with position and lap.",
+          "image": "./assets/ks-pro-v1/ks-pro-v1-page-2.png"
+        },
+        {
+          "name": "Page 3 — Fuel Strategy + Car Setup",
+          "description": "Fuel laps, remaining fuel and consumption per lap together with quick-access TC, ABS, brake bias and engine map values.",
+          "image": "./assets/ks-pro-v1/ks-pro-v1-page-3.png"
+        }
+      ],
+      "compatibility": {
+        "hardware": [
+          "MOZA KS Pro"
+        ],
+        "games": [
+          {
+            "name": "Assetto Corsa Competizione",
+            "short": "ACC",
+            "level": "expected",
+            "label": "EXPECTED",
+            "note": "Designed around MOZA telemetry; V1-specific real-device verification is pending."
+          },
+          {
+            "name": "Assetto Corsa",
+            "short": "AC",
+            "level": "expected",
+            "label": "EXPECTED",
+            "note": "MOZA telemetry compatibility expected; V1-specific verification is pending."
+          },
+          {
+            "name": "Assetto Corsa EVO",
+            "short": "AC EVO",
+            "level": "expected",
+            "label": "EXPECTED",
+            "note": "MOZA telemetry compatibility expected; V1-specific verification is pending."
+          },
+          {
+            "name": "Le Mans Ultimate",
+            "short": "LMU",
+            "level": "unverified",
+            "label": "NOT TESTED",
+            "note": "Release-specific verification pending."
+          }
+        ]
+      },
+      "releaseHistory": [
+        {
+          "version": "V1.P3.010",
+          "status": [
+            "latest",
+            "stable"
+          ]
+        }
+      ],
+      "download": {
+        "releaseTag": "ks-pro-v1.p3.010",
+        "fileName": "Bugzila_Dashboard_V1.P3.010.mzdash",
+        "releaseAssetUrl": "https://github.com/bugziladashboard/simracing/releases/download/ks-pro-v1.p3.010/Bugzila_Dashboard_V1.P3.010.mzdash",
+        "releasePageUrl": "https://github.com/bugziladashboard/simracing/releases/tag/ks-pro-v1.p3.010"
+      },
+      "heroLabel": "MOZA KS PRO V1",
+      "useProfile": {
+        "driverLevel": "Amateur to Advanced",
+        "bestFor": [
+          "Track Experience",
+          "Race Awareness",
+          "Tyre Management",
+          "Fuel Strategy",
+          "Longer Race Sessions"
+        ]
+      }
     },
     {
       "id": "moza-cm2-v1",
@@ -163,12 +393,30 @@
         "games": [
           {
             "name": "Assetto Corsa Competizione",
-            "level": "verified"
+            "short": "ACC",
+            "level": "verified",
+            "label": "VERIFIED"
+          },
+          {
+            "name": "Assetto Corsa",
+            "short": "AC",
+            "level": "expected",
+            "label": "EXPECTED",
+            "note": "MOZA telemetry compatibility expected; current project verification is pending."
           },
           {
             "name": "Assetto Corsa EVO",
+            "short": "AC EVO",
             "level": "partial",
+            "label": "PARTIAL",
             "note": "Core telemetry tested; track-map behavior may vary."
+          },
+          {
+            "name": "Le Mans Ultimate",
+            "short": "LMU",
+            "level": "unverified",
+            "label": "NOT TESTED",
+            "note": "Release-specific verification pending."
           }
         ]
       },
@@ -187,7 +435,17 @@
         "releaseAssetUrl": "https://github.com/bugziladashboard/simracing/releases/download/cm2-v1.p3.020/Bugzila_CM2_V1.P3.020.mzdash",
         "releasePageUrl": "https://github.com/bugziladashboard/simracing/releases/tag/cm2-v1.p3.020"
       },
-      "heroLabel": "MOZA CM2 V1"
+      "heroLabel": "MOZA CM2 V1",
+      "useProfile": {
+        "driverLevel": "Intermediate to Professional-oriented",
+        "bestFor": [
+          "Driver Training",
+          "Trail Braking Practice",
+          "Track Experience",
+          "Race Management",
+          "Telemetry Analysis"
+        ]
+      }
     },
     {
       "id": "moza-cm2-v2rqp",
@@ -240,7 +498,36 @@
         "hardware": [
           "MOZA CM2 Dashboard"
         ],
-        "games": []
+        "games": [
+          {
+            "name": "Assetto Corsa Competizione",
+            "short": "ACC",
+            "level": "expected",
+            "label": "EXPECTED",
+            "note": "Designed around MOZA telemetry; V2RQP-specific real-device verification is pending."
+          },
+          {
+            "name": "Assetto Corsa",
+            "short": "AC",
+            "level": "expected",
+            "label": "EXPECTED",
+            "note": "MOZA telemetry compatibility expected; V2RQP-specific verification is pending."
+          },
+          {
+            "name": "Assetto Corsa EVO",
+            "short": "AC EVO",
+            "level": "expected",
+            "label": "EXPECTED",
+            "note": "MOZA telemetry compatibility expected; V2RQP-specific verification is pending."
+          },
+          {
+            "name": "Le Mans Ultimate",
+            "short": "LMU",
+            "level": "unverified",
+            "label": "NOT TESTED",
+            "note": "Release-specific verification pending."
+          }
+        ]
       },
       "releaseHistory": [
         {
@@ -269,7 +556,24 @@
         "releaseAssetUrl": "https://github.com/bugziladashboard/simracing/releases/download/cm2-v2rqp.p3.003/Bugzila_CM2_V2RQP.P3.003.mzdash",
         "releasePageUrl": "https://github.com/bugziladashboard/simracing/releases/tag/cm2-v2rqp.p3.003"
       },
-      "heroLabel": "MOZA CM2 V2RQP"
+      "heroLabel": "MOZA CM2 V2RQP",
+      "useProfile": {
+        "driverLevel": "Advanced / Professional-oriented",
+        "bestFor": [
+          "Race Sessions",
+          "Qualifying Analysis",
+          "Practice Analysis",
+          "Race Engineer Workflow",
+          "Track Experience"
+        ]
+      }
     }
-  ]
+  ],
+  "gameStatusDefinitions": {
+    "verified": "Confirmed by real-device testing for this dashboard/release.",
+    "tested": "Tested on the target hardware; some title-specific telemetry may vary.",
+    "expected": "Expected to work through MOZA telemetry, but this release has not yet completed real-device verification.",
+    "partial": "Works with a known limitation or incomplete telemetry behavior.",
+    "unverified": "Not yet tested or confirmed for this dashboard/release."
+  }
 }
