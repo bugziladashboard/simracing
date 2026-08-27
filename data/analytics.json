@@ -1,0 +1,16 @@
+{
+  "enabled": false,
+  "provider": "ga4",
+  "measurementId": "",
+  "debugMode": false,
+  "siteName": "Bugzila Sim Racing Dashboard Hub",
+  "events": {
+    "dashboardDownload": true,
+    "dashboardView": true,
+    "quickComments": true,
+    "communityDiscussion": true,
+    "googlePlay": true,
+    "screenshotPreview": true,
+    "backToTop": true
+  }
+}

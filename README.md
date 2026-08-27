@@ -10,3 +10,10 @@ Changes:
 - Adds a floating **Top** button with smooth scroll.
 - Keeps the permanent hero phrase **BUILT FOR THE TRACK.**
 - Keeps live giscus configuration for `bugziladashboard/simracing`.
+
+
+## Step 5 — Analytics + Compatibility Cleanup
+
+- Removed the central Compatibility section because each Dashboard already includes Supported / Tested Games.
+- Added staged GA4 analytics infrastructure in `data/analytics.json` and `js/analytics.js`.
+- See `ANALYTICS_SETUP_GUIDE.md` to activate with a real Measurement ID.

@@ -1,0 +1,11 @@
+Bugzila Sim Racing Dashboard Hub — Step 5
+
+Upload all files in this package to the repository root and overwrite the previous Step 4.2.1 files.
+
+Changes:
+- Remove central Compatibility section/navigation item
+- Preserve Supported / Tested Games in every Dashboard detail
+- Add staged Google Analytics 4 infrastructure
+
+Suggested commit:
+Add GA4 analytics infrastructure and remove duplicate compatibility table
