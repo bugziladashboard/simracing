@@ -6,17 +6,15 @@
   <meta name="description" content="Bugzila Sim Racing — telemetry dashboards for MOZA KS Pro, MOZA CM2 and future SimHub releases.">
   <meta name="theme-color" content="#111317">
   <title>Bugzila Sim Racing Dashboards</title>
-  <link rel="stylesheet" href="./css/dashboards.css?v=20260827-step5-1">
+  <link rel="stylesheet" href="./css/dashboards.css?v=20260827-step3-5">
 </head>
 <body>
-  <div class="race-corner race-corner-top-left" aria-hidden="true"></div>
-  <div class="race-corner race-corner-bottom-right" aria-hidden="true"></div>
   <header class="site-header">
     <a class="brand" href="./" aria-label="Bugzila Dashboard home"><img class="brand-logo" src="./assets/common/bugzila-dashboard-logo.png" alt="Bugzila Dashboard BZD logo"></a>
     <nav class="site-nav" aria-label="Primary navigation">
       <a href="#dashboards">Dashboards</a>
       <a href="#updates">Updates</a>
-      <a href="#community">Community</a>
+      <a href="#compatibility">Compatibility</a>
       <a href="#car-play">Car Play</a>
       <a href="#support">Support</a>
     </nav>
@@ -66,22 +64,17 @@
       <div id="updates-list" class="updates-list"></div>
     </section>
 
-
-    <section id="community" class="section community-overview">
+    <section id="compatibility" class="section">
       <div class="section-heading split-heading">
         <div>
-          <p class="eyebrow">COMMUNITY</p>
-          <h2>Feedback & Comments</h2>
+          <p class="eyebrow">HARDWARE & GAMES</p>
+          <h2>Compatibility</h2>
         </div>
-        <p>Use Quick Comments for short feedback and impressions. Open a dedicated GitHub Discussion when you need bug tracking, a feature request or a support answer.</p>
+        <p>Game compatibility is shown conservatively. Verified means confirmed real-device testing; Expected means MOZA telemetry compatibility is anticipated but release-specific verification is still pending.</p>
       </div>
-      <div class="community-overview-grid">
-        <article class="community-card"><span>01</span><h3>Quick Comments</h3><p>Leave short feedback, impressions and real-world usage notes without leaving the Dashboard Hub.</p></article>
-        <article class="community-card"><span>02</span><h3>Bug Reports</h3><p>Report telemetry, display or compatibility issues with enough detail to reproduce them.</p></article>
-        <article class="community-card"><span>03</span><h3>Feature Requests</h3><p>Suggest new pages, telemetry fields, layouts, platforms or usability improvements.</p></article>
-        <article class="community-card"><span>04</span><h3>Q&A</h3><p>Ask installation, compatibility and usage questions for the community.</p></article>
-      </div>
-      <a class="button secondary" href="https://github.com/bugziladashboard/simracing/discussions" target="_blank" rel="noopener noreferrer">Open GitHub Discussions</a>
+      <div id="compatibility-table" class="table-wrap"></div>
+      <div class="legend-block"><p class="eyebrow mini-eyebrow">GAME STATUS</p><div id="compatibility-legend" class="status-legend"></div></div>
+      <div class="legend-block"><p class="eyebrow mini-eyebrow">RELEASE STATUS</p><div id="status-legend" class="status-legend"></div></div>
     </section>
 
     <section id="car-play" class="section app-promo">
@@ -112,29 +105,14 @@
     <span>© 2026 Bugzila.</span>
   </footer>
 
-  <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top"><span aria-hidden="true">↑</span><b>Top</b></button>
-
-  <dialog id="community-modal" class="community-modal">
-    <button class="modal-close community-close" type="button" aria-label="Close community feedback">×</button>
-    <div class="community-modal-head">
-      <p class="eyebrow">COMMUNITY FEEDBACK</p>
-      <h2 id="community-modal-title">Quick Comments &amp; Feedback</h2>
-      <p id="community-modal-copy">Leave short feedback here. Use the dedicated buttons below when a topic needs its own GitHub Discussion.</p>
-    </div>
-    <div id="community-modal-actions" class="community-actions"></div>
-    <div id="giscus-container" class="giscus-shell"></div>
-  </dialog>
-
   <dialog id="image-modal" class="image-modal">
     <button class="modal-close" type="button" aria-label="Close image">×</button>
     <img id="modal-image" src="" alt="Dashboard screenshot preview">
     <p id="modal-caption"></p>
   </dialog>
 
-  <script src="./js/dashboards.js?v=20260827-step5-1" defer></script>
-  <script src="./js/downloads.js?v=20260827-step5-1" defer></script>
-  <script src="./js/community.js?v=20260827-step5-1" defer></script>
-  <script src="./js/analytics.js?v=20260827-step5-1" defer></script>
-  <script src="./js/ui.js?v=20260827-step5-1" defer></script>
+  <script src="./js/dashboards.js?v=20260827-step3-5" defer></script>
+  <script src="./js/downloads.js?v=20260827-step3-5" defer></script>
+  <script src="./js/analytics.js?v=20260827-step3-5" defer></script>
 </body>
 </html>

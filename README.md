@@ -1,26 +1,20 @@
-# Bugzila Sim Racing Dashboard Hub — Step 4.2
+# Bugzila Sim Racing Dashboard Hub — Step 3.4
 
-Community UX polish release.
+This update adds per-dashboard usage guidance and game compatibility fields.
 
-Changes:
-- Renames the embedded giscus action to **Quick Comments** and explains when to use it.
-- Keeps **Report a Bug**, **Request a Feature**, and **Ask a Question** as dedicated GitHub Discussions opened in a new tab.
-- Prefills the dashboard/version in dedicated Discussion titles.
-- Adds subtle fading checkered-flag graphics to the top-left and bottom-right page corners.
-- Adds a floating **Top** button with smooth scroll.
-- Keeps the permanent hero phrase **BUILT FOR THE TRACK.**
-- Keeps live giscus configuration for `bugziladashboard/simracing`.
+## New in Step 3.4
+- Recommended Driver Level for every dashboard
+- Best For / use-case tags for every dashboard
+- Supported / Tested Games inside each dashboard property table
+- Compatibility states: Verified, Tested, Expected, Partial, Not Tested
+- Global Compatibility table expanded with ACC, AC, AC EVO and LMU status where applicable
+- Bugzila Car Play application icon added to the Car Play promotion section
+- Permanent brand phrase preserved: **BUILT FOR THE TRACK.**
 
-
-## Step 5.1 — Production GA4 Analytics
-
-- Removed the central Compatibility section because each Dashboard already includes Supported / Tested Games.
-- Added staged GA4 analytics infrastructure in `data/analytics.json` and `js/analytics.js`.
-- See `ANALYTICS_SETUP_GUIDE.md` to activate with a real Measurement ID.
+## Compatibility policy
+Compatibility remains conservative. A title is only marked Verified when confirmed by real-device testing for that dashboard/release.
 
 
-### Production GA4
-- Enabled: Yes
-- Measurement ID: `G-6DFKT3H8ZE`
-- Property/Web Stream: Bugzila Dashboard GitHub Pages
-- Production debug mode: Off
+Step 3.5 updates:
+- Improved mobile layout to fit the screen width more cleanly on left and right.
+- Grouped multi-page dashboards inside an outer preview frame so each 3-page set reads as one package.
