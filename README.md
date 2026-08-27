@@ -12,8 +12,15 @@ Changes:
 - Keeps live giscus configuration for `bugziladashboard/simracing`.
 
 
-## Step 5 — Analytics + Compatibility Cleanup
+## Step 5.1 — Production GA4 Analytics
 
 - Removed the central Compatibility section because each Dashboard already includes Supported / Tested Games.
 - Added staged GA4 analytics infrastructure in `data/analytics.json` and `js/analytics.js`.
 - See `ANALYTICS_SETUP_GUIDE.md` to activate with a real Measurement ID.
+
+
+### Production GA4
+- Enabled: Yes
+- Measurement ID: `G-6DFKT3H8ZE`
+- Property/Web Stream: Bugzila Dashboard GitHub Pages
+- Production debug mode: Off

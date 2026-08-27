@@ -1,7 +1,7 @@
 window.BugzilaAnalytics = window.BugzilaAnalytics || {};
 
 (function () {
-  const CONFIG_URL = "./data/analytics.json?v=20260827-step5";
+  const CONFIG_URL = "./data/analytics.json?v=20260827-step5-1";
   let config = null;
   let ready = false;
 

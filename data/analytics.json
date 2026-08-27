@@ -1,7 +1,7 @@
 {
-  "enabled": false,
+  "enabled": true,
   "provider": "ga4",
-  "measurementId": "",
+  "measurementId": "G-6DFKT3H8ZE",
   "debugMode": false,
   "siteName": "Bugzila Sim Racing Dashboard Hub",
   "events": {

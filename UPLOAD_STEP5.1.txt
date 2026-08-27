@@ -1,0 +1,11 @@
+STEP 5.1 — PRODUCTION GA4 ANALYTICS
+
+Upload all files in this package to the root of:
+https://github.com/bugziladashboard/simracing
+
+Recommended commit message:
+Activate GA4 production analytics
+
+After GitHub Pages deploys, open:
+https://bugziladashboard.github.io/simracing/?build=step5-1
+and hard refresh once.
