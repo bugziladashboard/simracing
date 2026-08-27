@@ -44,7 +44,7 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
           </div>
           <div class="download-line">${downloadStat(d)}</div>
           <div class="card-actions">
-            <a class="button secondary small" href="#${esc(d.id)}">View Details</a>
+            <a class="button secondary small view-details-button" data-dashboard-id="${esc(d.id)}" href="#${esc(d.id)}">View Details</a>
             <button class="button primary small download-button" type="button" data-dashboard-id="${esc(d.id)}">Download</button>
           </div>
         </div>
@@ -118,6 +118,19 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
             <div class="release-list">${history}</div>
           </div>
         </div>
+        <div class="dashboard-community-panel">
+          <div>
+            <p class="eyebrow mini-eyebrow">COMMUNITY FEEDBACK</p>
+            <h3>Used this dashboard?</h3>
+            <p>Leave a quick comment, or open a dedicated discussion for bugs, feature requests and questions.</p>
+          </div>
+          <div class="dashboard-community-actions">
+            <button class="button primary community-comments-button" type="button" data-dashboard-id="${esc(d.id)}">Quick Comments</button>
+            <a class="button secondary community-link" data-community-link="bug" data-dashboard-id="${esc(d.id)}" href="https://github.com/bugziladashboard/simracing/discussions" target="_blank" rel="noopener noreferrer">Report a Bug</a>
+            <a class="button secondary community-link" data-community-link="feature" data-dashboard-id="${esc(d.id)}" href="https://github.com/bugziladashboard/simracing/discussions" target="_blank" rel="noopener noreferrer">Request a Feature</a>
+            <a class="button secondary community-link" data-community-link="qa" data-dashboard-id="${esc(d.id)}" href="https://github.com/bugziladashboard/simracing/discussions" target="_blank" rel="noopener noreferrer">Ask a Question</a>
+          </div>
+        </div>
       </section>`;
   }
 
@@ -126,26 +139,6 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
       .sort((a,b) => b.releaseDate.localeCompare(a.releaseDate))
       .map(d => `<article class="update-card"><time datetime="${esc(d.releaseDate)}">${esc(d.releaseDate)}</time><h3>${esc(d.title)}</h3><p>${esc(d.platform)} · ${d.status.map(s => s.toUpperCase()).join(" / ")}</p></article>`)
       .join("");
-  }
-
-  function compatibility(dashboards) {
-    const rows = dashboards.map(d => {
-      const games = d.compatibility.games.length
-        ? d.compatibility.games.map(g => `<div class="compat-game-row"><span class="compat-tag compat-${esc(g.level)}">${esc(gameLabel(g))}</span> <strong>${esc(g.short || g.name)}</strong> <span>${esc(g.name)}</span>${g.note ? `<br><small>${esc(g.note)}</small>` : ""}</div>`).join("")
-        : `<span class="compat-tag compat-unverified">NOT TESTED</span> <span>Game verification will be added after confirmed testing.</span>`;
-      const recommendedUse = `<strong>${esc(d.useProfile?.driverLevel || "General")}</strong><br><small>${esc((d.useProfile?.bestFor || []).join(" · "))}</small>`;
-      return `<tr><td><strong>${esc(d.family)}</strong><br><small>${esc(d.version)}</small></td><td>${esc(d.platform)}</td><td>${esc(d.resolution)}</td><td>${recommendedUse}</td><td>${games}</td></tr>`;
-    }).join("");
-    return `<table class="compat-table"><thead><tr><th>Dashboard</th><th>Hardware</th><th>Resolution</th><th>Recommended Use</th><th>Game Compatibility</th></tr></thead><tbody>${rows}</tbody></table>`;
-  }
-
-  function legend(defs) {
-    return Object.entries(defs).map(([key, value]) => `<div class="legend-item">${statusBadge(key)}<span>${esc(value)}</span></div>`).join("");
-  }
-
-  function gameLegend(defs) {
-    const labels = { verified: "VERIFIED", tested: "TESTED", expected: "EXPECTED", partial: "PARTIAL", unverified: "NOT TESTED" };
-    return Object.entries(defs || {}).map(([key, value]) => `<div class="legend-item"><span class="compat-tag compat-${esc(key)}">${esc(labels[key] || key.replace(/-/g, " "))}</span><span>${esc(value)}</span></div>`).join("");
   }
 
   function heroRows(dashboards) {
@@ -172,7 +165,7 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
 
   async function init() {
     try {
-      const response = await fetch("./data/dashboards.json?v=20260827-step3-5", { cache: "no-store" });
+      const response = await fetch("./data/dashboards.json?v=20260827-step5-2", { cache: "no-store" });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const data = await response.json();
       window.BugzilaDashboards.data = data;
@@ -182,9 +175,6 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
       document.getElementById("dashboard-grid").innerHTML = data.dashboards.map(dashboardCard).join("");
       document.getElementById("dashboard-details").innerHTML = data.dashboards.map(dashboardDetail).join("");
       document.getElementById("updates-list").innerHTML = updates(data.dashboards);
-      document.getElementById("compatibility-table").innerHTML = compatibility(data.dashboards);
-      document.getElementById("compatibility-legend").innerHTML = gameLegend(data.gameStatusDefinitions);
-      document.getElementById("status-legend").innerHTML = legend(data.statusDefinitions);
       setupModal();
       document.dispatchEvent(new CustomEvent("bugzila:dashboards-ready", { detail: data }));
     } catch (error) {

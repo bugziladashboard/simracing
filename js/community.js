@@ -1,7 +1,7 @@
 window.BugzilaCommunity = window.BugzilaCommunity || {};
 
 (function () {
-  const CONFIG_URL = "./data/community.json?v=20260827-step5-1";
+  const CONFIG_URL = "./data/community.json?v=20260827-step5-2";
   let config = null;
   let dashboards = [];
 
