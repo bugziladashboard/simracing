@@ -1,0 +1,7 @@
+Bugzila Sim Racing Dashboard Hub — Step 5.3
+
+Upload all files/folders in this ZIP to the repository root.
+Suggested commit:
+Add outer dashboard package frame and refine mobile grouping
+
+Source baseline: Step 5.2 Production Mobile Merge.

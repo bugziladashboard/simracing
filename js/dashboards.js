@@ -72,6 +72,11 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
 
     return `
       <section id="${esc(d.id)}" class="dashboard-detail">
+        <div class="dashboard-package-shell">
+          <div class="dashboard-package-marker">
+            <span>BUGZILA DASHBOARD PACKAGE</span>
+            <strong>${esc(d.platform)} // ${esc(d.version)}</strong>
+          </div>
         <div class="detail-header">
           <div class="detail-title">
             <p class="eyebrow">${esc(d.platform)} // ${esc(d.version)}</p>
@@ -131,6 +136,7 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
             <a class="button secondary community-link" data-community-link="qa" data-dashboard-id="${esc(d.id)}" href="https://github.com/bugziladashboard/simracing/discussions" target="_blank" rel="noopener noreferrer">Ask a Question</a>
           </div>
         </div>
+        </div>
       </section>`;
   }
 
@@ -165,7 +171,7 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
 
   async function init() {
     try {
-      const response = await fetch("./data/dashboards.json?v=20260827-step5-2", { cache: "no-store" });
+      const response = await fetch("./data/dashboards.json?v=20260827-step5-3", { cache: "no-store" });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const data = await response.json();
       window.BugzilaDashboards.data = data;

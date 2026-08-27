@@ -35,3 +35,11 @@ Merged without removing Step 5.1 production features:
 - Mobile width/spacing improvements to better fit phone screens left-to-right.
 - A grouped outer preview frame for multi-page dashboard sets with Page 1 / Page 2 / Page 3 badges.
 - GA4, giscus, Community, GitHub Discussions, download counters, Back-to-Top and racing corner treatment are retained.
+
+
+## Step 5.3 — Dashboard Package Outer Frame
+- Added one large outer frame around every complete dashboard package.
+- The outer frame groups title, download, specifications, page previews, design concept, release history and community feedback as one dashboard.
+- The existing multi-page preview frame remains nested inside the package frame.
+- Mobile Back-to-Top was reduced to a compact arrow button to obstruct less content.
+- Step 5.2 Production GA4, Community, giscus, Discussions and download systems remain the baseline.
