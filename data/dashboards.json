@@ -667,6 +667,11 @@
           "Race Engineer Workflow",
           "Track Experience"
         ]
+      },
+      "inspiration": {
+        "label": "INSPIRED BY",
+        "name": "MM Sim Racing Dashboard — Mauricio Moraes",
+        "note": "With appreciation for his work and contribution to the sim racing community."
       }
     }
   ],

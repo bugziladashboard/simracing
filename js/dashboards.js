@@ -90,6 +90,12 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
       : `This dashboard is presented as a single-page layout.`;
 
     const features = d.features.map(f => `<span>${esc(f)}</span>`).join("");
+    const inspiration = d.inspiration ? `
+      <div class="inspiration-credit">
+        <span>${esc(d.inspiration.label || "INSPIRED BY")}</span>
+        <strong>${esc(d.inspiration.name)}</strong>
+        <p>${esc(d.inspiration.note)}</p>
+      </div>` : "";
     const history = d.releaseHistory.map(r => `
       <div class="release-item"><strong>${esc(r.version)}</strong><div class="release-statuses">${r.status.map(statusBadge).join("")}</div></div>`).join("");
 
@@ -140,6 +146,7 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
           <div class="info-panel">
             <h3>Design Concept</h3>
             <p>${esc(d.concept)}</p>
+            ${inspiration}
             <div class="feature-list">${features}</div>
             <p class="preview-note"><strong>Preview note:</strong> ${esc(d.previewNote)}</p>
           </div>
@@ -197,7 +204,7 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
 
   async function init() {
     try {
-      const response = await fetch("./data/dashboards.json?v=20260827-step5-6", { cache: "no-store" });
+      const response = await fetch("./data/dashboards.json?v=20260828-step5-13", { cache: "no-store" });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const data = await response.json();
       window.BugzilaDashboards.data = data;

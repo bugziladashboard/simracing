@@ -1,3 +1,13 @@
+# Step 5.13 — MM Sim Racing Inspiration Credit
+
+Current production package.
+
+- Base: Step 5.12 Example Usage + Setup Guide package.
+- Adds a compact **INSPIRED BY** credit only to **Bugzila CM2 V2RQP.P3.003**.
+- Credit text: **MM Sim Racing Dashboard — Mauricio Moraes**.
+- Appreciation note: **With appreciation for his work and contribution to the sim racing community.**
+- Preserves all unrelated Step 5.12 functionality.
+
 # Step 5.12 — Example Usage + Tags + Setup Guide
 
 Current production package.

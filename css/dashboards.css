@@ -709,3 +709,33 @@ main, .site-footer { position: relative; z-index: 1; }
   .examples-grid, .usage-guide-grid { grid-template-columns: 1fr; }
   .example-card-body, .usage-card { padding: 16px; }
 }
+
+/* Step 5.13 — CM2 V2RQP.P3.003 inspiration credit */
+.inspiration-credit {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border: 1px solid #3f4650;
+  border-left: 3px solid var(--accent);
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(255,59,48,.07), rgba(255,255,255,.015));
+}
+.inspiration-credit > span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--accent);
+  font-size: .65rem;
+  font-weight: 950;
+  letter-spacing: .16em;
+}
+.inspiration-credit > strong {
+  display: block;
+  color: var(--text);
+  font-size: .92rem;
+  line-height: 1.35;
+}
+.inspiration-credit > p {
+  margin-top: 5px !important;
+  color: var(--muted) !important;
+  font-size: .78rem;
+  line-height: 1.5;
+}
