@@ -1,7 +1,10 @@
 window.BugzilaDashboards = window.BugzilaDashboards || {};
 
 (function () {
-  const statusClass = (status) => `status-${status.toLowerCase()}`;
+  const statusClass = (status) => {
+    const slug = String(status || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+    return `status-${slug}`;
+  };
   const statusBadge = (status) => `<span class="status-badge ${statusClass(status)}">${status}</span>`;
   const esc = (value = "") => String(value).replace(/[&<>"]/g, (ch) => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[ch]));
 
@@ -182,7 +185,7 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
 
   function heroRows(dashboards) {
     return dashboards
-      .map(d => `<div class="telemetry-row"><span>${esc(d.heroLabel || d.platform)}</span><b>READY</b></div>`)
+      .map(d => `<div class="telemetry-row"><a class="telemetry-release-link" href="#${esc(d.id)}" aria-label="View details for ${esc(d.title)}">${esc(d.heroLabel || d.platform)}</a><b>READY</b></div>`)
       .join("");
   }
 
@@ -204,7 +207,7 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
 
   async function init() {
     try {
-      const response = await fetch("./data/dashboards.json?v=20260828-step5-13", { cache: "no-store" });
+      const response = await fetch("./data/dashboards.json?v=20260830-step5-15", { cache: "no-store" });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const data = await response.json();
       window.BugzilaDashboards.data = data;

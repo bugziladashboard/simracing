@@ -79,6 +79,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .telemetry-main strong { font-size: 4.8rem; line-height: .85; color: var(--accent); }
 .telemetry-main span { margin-top: 11px; font-weight: 900; letter-spacing: .1em; color: var(--muted); }
 .telemetry-row b { color: var(--green); }
+.telemetry-release-link { color: var(--text); font-weight: 800; transition: color .18s ease; }
+.telemetry-release-link:hover, .telemetry-release-link:focus-visible { color: var(--accent); }
 .telemetry-row .muted-value { color: #69717c; }
 .telemetry-downloads { position: relative; display: flex; align-items: baseline; justify-content: space-between; gap: 18px; padding: 15px 18px 17px; color: var(--muted); font-size: .7rem; letter-spacing: .08em; }
 .telemetry-downloads strong { color: var(--text); font-size: 1.2rem; letter-spacing: 0; }
@@ -739,3 +741,6 @@ main, .site-footer { position: relative; z-index: 1; }
   font-size: .78rem;
   line-height: 1.5;
 }
+
+/* Step 5.14 — add release badge style for import-test dashboards */
+.status-ready-for-import-test { color: #071925; background: #66b3ff; }

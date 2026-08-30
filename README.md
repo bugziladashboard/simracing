@@ -1,3 +1,28 @@
+# Step 5.15 — Current Releases Dashboard Links
+
+Current production package.
+
+- Base: Step 5.14 CM2 V3Practice P3.012 package.
+- Makes each dashboard name in the hero **CURRENT RELEASES** panel clickable.
+- Each link scrolls directly to that dashboard's detail section on the same page.
+- Adds a small hover/focus treatment so the dashboard names read as interactive links.
+- Preserves all unrelated Step 5.14 functionality.
+
+# Step 5.14 — CM2 V3Practice P3.012 Catalog Entry
+
+Current production package.
+
+- Base: Step 5.13 MM Sim Racing Inspiration Credit package.
+- Adds a new dashboard entry for **Bugzila_CM2_V3Practice.P3.012**.
+- Dashboard family: **Bugzila CM2 V3Practice**.
+- Project type: **Practice / Driver Training Dashboard**.
+- Target device: **MOZA CM2 / S09 Display** at **1280 × 720**.
+- Primary game: **Assetto Corsa Competizione (ACC)**.
+- Uses supplied preview images for Page 1, Page 2 and Page 3 under `assets/cm2-v3practice/`.
+- Adds release status presentation **Ready for Import Test**.
+- Explicitly avoids describing V3Practice.P3.012 as Hardware Verified until it has been imported and confirmed on a real MOZA CM2 display.
+- Preserves all unrelated Step 5.13 functionality.
+
 # Step 5.13 — MM Sim Racing Inspiration Credit
 
 Current production package.
