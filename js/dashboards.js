@@ -207,7 +207,7 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
 
   async function init() {
     try {
-      const response = await fetch("./data/dashboards.json?v=20260830-step5-15", { cache: "no-store" });
+      const response = await fetch("./data/dashboards.json?v=20260901-step5-17", { cache: "no-store" });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const data = await response.json();
       window.BugzilaDashboards.data = data;

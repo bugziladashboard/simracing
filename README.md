@@ -1,3 +1,28 @@
+# Step 5.17 — CM2 V3Practice P3.017 Bug Fix Update
+
+Current production package.
+
+- Base: Step 5.16 CM2 V3Practice P3.016.2 package.
+- Updates **Bugzila CM2 V3Practice** current release to **V3Practice.P3.017**.
+- Marks the current dashboard entry as **Bug Fix Update** / **New Update**.
+- Updates GitHub Release tag and direct-download target to `cm2-v3practice.p3.017` and `Bugzila_CM2_V3Practice_P3_017.mzdash`.
+- Moves V3Practice.P3.016.2 to legacy release history.
+- Keeps the existing P3.012 preview screenshots as the current visual reference.
+- Keeps P3.017 at **Ready for Import Test** until this exact version is confirmed on a real MOZA CM2 display.
+- Preserves all unrelated Step 5.16 functionality.
+
+# Step 5.16 — CM2 V3Practice P3.016.2 Release Update
+
+Current production package.
+
+- Base: Step 5.15 Current Releases Links package.
+- Updates the **Bugzila CM2 V3Practice** current release from **V3Practice.P3.012** to **V3Practice.P3.016.2**.
+- Updates the GitHub release tag, asset filename, direct download URL and release-page URL to P3.016.2.
+- Keeps P3.012 in release history as a legacy release.
+- Keeps the existing P3.012 screenshots as the current visual reference and labels them accurately as P3.012 previews.
+- Keeps **Ready for Import Test** for P3.016.2 until this exact version is confirmed on a real MOZA CM2 display.
+- Preserves all unrelated Step 5.15 functionality.
+
 # Step 5.15 — Current Releases Dashboard Links
 
 Current production package.

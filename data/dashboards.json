@@ -1,6 +1,6 @@
 {
   "schemaVersion": 6,
-  "updatedAt": "2026-08-30",
+  "updatedAt": "2026-09-01",
   "site": {
     "name": "Bugzila Sim Racing",
     "tagline": "Telemetry dashboards built for the track.",
@@ -17,7 +17,8 @@
     "beta": "Feature-complete enough for testing, but may still change.",
     "experimental": "Testing new ideas or telemetry behavior.",
     "legacy": "Older version retained for release history.",
-    "ready for import test": "Prepared for the next import / confirmation step, but not yet confirmed on the target hardware."
+    "ready for import test": "Prepared for the next import / confirmation step, but not yet confirmed on the target hardware.",
+    "bug fix update": "New maintenance release containing bug fixes and refinements."
   },
   "dashboards": [
     {
@@ -678,21 +679,22 @@
     {
       "id": "moza-cm2-v3practice",
       "family": "Bugzila CM2 V3Practice",
-      "title": "Bugzila CM2 V3Practice.P3.012",
+      "title": "Bugzila CM2 V3Practice.P3.017",
       "platform": "MOZA CM2 Dashboard",
       "deviceProfile": "S09 Display",
       "hardwareVersion": "RS21-W08-HW SM-DU-V14",
       "resolution": "1280 × 720",
-      "version": "V3Practice.P3.012",
-      "releaseDate": "2026-08-30",
+      "version": "V3Practice.P3.017",
+      "releaseDate": "2026-09-01",
       "status": [
         "latest",
+        "Bug Fix Update",
         "Ready for Import Test"
       ],
       "summary": "A 3-page practice and driver-training dashboard for MOZA CM2, designed for Assetto Corsa Competizione.",
       "concept": "Built for beginner and intermediate sim racers who want to learn the track, improve pedal technique, understand tyre and brake behavior, and become more familiar with GT3 car controls. Page 1 answers ‘Where am I on the track?’, Page 2 answers ‘What am I doing with the pedals?’, and Page 3 answers ‘Are the tyres and brakes ready, and what is the car doing?’ The visual direction follows a high-contrast dark motorsport UI with large critical values, fast glance readability and consistent information placement between pages.",
       "previewVersion": "V3Practice.P3.012",
-      "previewNote": "Preview screenshots are from Bugzila_CM2_V3Practice.P3.012. Release status is Ready for Import Test. Do not describe this version as Hardware Verified until P3.012 has been imported and confirmed on a real MOZA CM2 display.",
+      "previewNote": "Preview screenshots are from Bugzila_CM2_V3Practice.P3.012 and are retained as the current visual reference. Current release is V3Practice.P3.017 — New Update / Bug Fix. Status remains Ready for Import Test until this exact P3.017 version is imported and confirmed on a real MOZA CM2 display.",
       "features": [
         "Dual Map Track View",
         "Driver Map Rotation",
@@ -730,7 +732,7 @@
             "name": "MOZA CM2 HD Racing Dash",
             "level": "native",
             "label": "S09 TARGET / IMPORT TEST",
-            "note": "Target hardware for this dashboard family. V3Practice.P3.012 is currently Ready for Import Test and must not be described as Hardware Verified until imported and confirmed on a real MOZA CM2 display."
+            "note": "Target hardware for this dashboard family. V3Practice.P3.017 is currently Ready for Import Test and must not be described as Hardware Verified until this exact version is imported and confirmed on a real MOZA CM2 display."
           }
         ],
         "games": [
@@ -739,7 +741,7 @@
             "short": "ACC",
             "level": "expected",
             "label": "READY FOR IMPORT TEST",
-            "note": "Primary development game for V3Practice.P3.012. Real MOZA CM2 import confirmation is still pending for this version."
+            "note": "Primary development game for V3Practice.P3.017. Real MOZA CM2 import confirmation is still pending for this exact version."
           },
           {
             "name": "Assetto Corsa",
@@ -774,18 +776,31 @@
       },
       "releaseHistory": [
         {
-          "version": "V3Practice.P3.012",
+          "version": "V3Practice.P3.017",
           "status": [
             "latest",
+            "Bug Fix Update",
             "Ready for Import Test"
+          ]
+        },
+        {
+          "version": "V3Practice.P3.016.2",
+          "status": [
+            "legacy"
+          ]
+        },
+        {
+          "version": "V3Practice.P3.012",
+          "status": [
+            "legacy"
           ]
         }
       ],
       "download": {
-        "releaseTag": "cm2-v3practice.p3.012",
-        "fileName": "Bugzila_CM2_V3Practice.P3.012.mzdash",
-        "releaseAssetUrl": "https://github.com/bugziladashboard/simracing/releases/download/cm2-v3practice.p3.012/Bugzila_CM2_V3Practice.P3.012.mzdash",
-        "releasePageUrl": "https://github.com/bugziladashboard/simracing/releases/tag/cm2-v3practice.p3.012"
+        "releaseTag": "cm2-v3practice.p3.017",
+        "fileName": "Bugzila_CM2_V3Practice_P3_017.mzdash",
+        "releaseAssetUrl": "https://github.com/bugziladashboard/simracing/releases/download/cm2-v3practice.p3.017/Bugzila_CM2_V3Practice_P3_017.mzdash",
+        "releasePageUrl": "https://github.com/bugziladashboard/simracing/releases/tag/cm2-v3practice.p3.017"
       },
       "heroLabel": "MOZA CM2 V3Practice",
       "useProfile": {
