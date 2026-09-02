@@ -1,3 +1,13 @@
+# Step 5.18 — Dashboard Page Switch Guide Image
+
+Current production package.
+
+- Base: Step 5.17 CM2 V3Practice P3.017 Bug Fix package.
+- Adds the supplied **How to Change Dashboard Pages** image to the existing **Switch KS Pro Pages 2 / 3** setup card.
+- The guide image fits the existing setup-card width and opens in the site's existing large image modal when clicked.
+- Adds the guide asset at `assets/guides/bugzila-dashboard-page-switch-guide.png`.
+- Preserves all unrelated Step 5.17 functionality.
+
 # Step 5.17 — CM2 V3Practice P3.017 Bug Fix Update
 
 Current production package.

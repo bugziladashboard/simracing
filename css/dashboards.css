@@ -747,3 +747,42 @@ main, .site-footer { position: relative; z-index: 1; }
 
 /* Step 5.17 — V3Practice P3.017 bug-fix update badge */
 .status-bug-fix-update { color: #241400; background: #ff9f43; }
+
+/* Step 5.18 — dashboard page-switch guide image */
+.usage-guide-image-button {
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #090b0d;
+  color: var(--muted);
+  cursor: zoom-in;
+  text-align: left;
+  transition: border-color .18s ease, transform .18s ease;
+}
+.usage-guide-image-button:hover,
+.usage-guide-image-button:focus-visible {
+  border-color: rgba(255,59,48,.72);
+  transform: translateY(-1px);
+}
+.usage-guide-image-button:focus-visible {
+  outline: 3px solid rgba(88,166,255,.42);
+  outline-offset: 3px;
+}
+.usage-guide-image-button img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.usage-guide-image-button span {
+  display: block;
+  padding: 9px 12px;
+  border-top: 1px solid var(--line-soft);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-align: center;
+}

@@ -195,7 +195,7 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
     const caption = document.getElementById("modal-caption");
     if (!modal) return;
     document.addEventListener("click", (event) => {
-      const item = event.target.closest(".gallery-item");
+      const item = event.target.closest(".gallery-item, .usage-guide-image-button");
       if (!item) return;
       image.src = item.dataset.image;
       caption.textContent = item.dataset.caption;
