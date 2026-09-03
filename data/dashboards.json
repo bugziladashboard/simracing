@@ -693,8 +693,8 @@
       ],
       "summary": "A 3-page practice and driver-training dashboard for MOZA CM2, designed for Assetto Corsa Competizione.",
       "concept": "Built for beginner and intermediate sim racers who want to learn the track, improve pedal technique, understand tyre and brake behavior, and become more familiar with GT3 car controls. Page 1 answers ‘Where am I on the track?’, Page 2 answers ‘What am I doing with the pedals?’, and Page 3 answers ‘Are the tyres and brakes ready, and what is the car doing?’ The visual direction follows a high-contrast dark motorsport UI with large critical values, fast glance readability and consistent information placement between pages.",
-      "previewVersion": "V3Practice.P3.012",
-      "previewNote": "Preview screenshots are from Bugzila_CM2_V3Practice.P3.012 and are retained as the current visual reference. Current release is V3Practice.P3.017 — New Update / Bug Fix. Status remains Ready for Import Test until this exact P3.017 version is imported and confirmed on a real MOZA CM2 display.",
+      "previewVersion": "V3Practice.P3.017",
+      "previewNote": "Preview screenshots are now real-device photos from Bugzila_CM2_V3Practice.P3.017. Current release is V3Practice.P3.017 — New Update / Bug Fix.",
       "features": [
         "Dual Map Track View",
         "Driver Map Rotation",
@@ -713,17 +713,17 @@
         {
           "name": "Page 1 — Track View",
           "description": "Dual-map practice page with a large rotating Driver Map, a smaller Full Track overview, live driver telemetry, session status and lower track information for circuit familiarization.",
-          "image": "./assets/cm2-v3practice/cm2-v3practice-page-1.jpg"
+          "image": "./assets/cm2-v3practice/cm2-v3practice-p3-017-page-1.jpg"
         },
         {
           "name": "Page 2 — Pedal Input",
           "description": "Driver-input training page with a large throttle / brake history graph, live pedal bars, coaching reminder and shared speed, gear, RPM and control information.",
-          "image": "./assets/cm2-v3practice/cm2-v3practice-page-2.jpg"
+          "image": "./assets/cm2-v3practice/cm2-v3practice-p3-017-page-2.jpg"
         },
         {
           "name": "Page 3 — Tyres & Brakes",
           "description": "Tyre-management and brake-management page with four-wheel status, car controls, fuel, delta, tyre readiness, axle balance and environment data.",
-          "image": "./assets/cm2-v3practice/cm2-v3practice-page-3.jpg"
+          "image": "./assets/cm2-v3practice/cm2-v3practice-p3-017-page-3.jpg"
         }
       ],
       "compatibility": {

@@ -1,3 +1,12 @@
+# Step 5.19 — CM2 V3Practice Real Preview Refresh
+
+Current production package.
+
+- Base: Step 5.18 Page Switch Guide Image package.
+- Replaces the preview images for **Bugzila CM2 V3Practice** with newly supplied real-device photos for **Bugzila_CM2_V3Practice.P3.017**.
+- Updates `previewVersion` and `previewNote` for the CM2 V3Practice entry to reflect the new P3.017 example images.
+- No other dashboard families or website sections are intentionally changed.
+
 # Step 5.18 — Dashboard Page Switch Guide Image
 
 Current production package.
