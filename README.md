@@ -1,3 +1,14 @@
+# Step 5.21 — Hero Background Image Refresh
+
+Current production package.
+
+- Base: Step 5.20 CM2 V3Practice P3.021 update package.
+- Adds the supplied Monza burnout artwork as a new decorative hero background image.
+- Places the artwork behind the hero area with a dark overlay and right-shifted composition so the main heading, copy and action buttons remain easy to read.
+- Preserves the existing top-left and bottom-right checkered-flag corner graphics in their current positions.
+- Adds the new asset at `assets/common/bugzila-hero-monza-bzd.png`.
+- No unrelated site sections, navigation, analytics, comments, counters, or dashboard content are intentionally changed.
+
 # Step 5.20 — CM2 V3Practice P3.021 Update
 
 Current production package.
