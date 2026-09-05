@@ -1,3 +1,16 @@
+# Step 5.20 — CM2 V3Practice P3.021 Update
+
+Current production package.
+
+- Base: Step 5.19 CM2 V3Practice real preview refresh package.
+- Updates only the **Bugzila CM2 V3Practice** entry and related release metadata.
+- Current version updated from **P3.017** to **P3.021**.
+- Download file updated to **Bugzila_CM2_V3Practice_P3_021.mzdash**.
+- Release / changelog summary updated to describe the new Page 3 Balance Graph, Readiness + Balance refinement, Fuel/Lap fallback fix, and preserved features.
+- Hardware verification status updated to reflect real MOZA CM2 confirmation for P3.021.
+- Replaces the **Page 3** preview image with the newly supplied P3.021 real-device screenshot while preserving the existing Page 1 / Page 2 preview images.
+- No unrelated site sections are intentionally changed.
+
 # Step 5.19 — CM2 V3Practice Real Preview Refresh
 
 Current production package.

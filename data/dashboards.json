@@ -1,6 +1,6 @@
 {
   "schemaVersion": 6,
-  "updatedAt": "2026-09-01",
+  "updatedAt": "2026-09-05",
   "site": {
     "name": "Bugzila Sim Racing",
     "tagline": "Telemetry dashboards built for the track.",
@@ -18,7 +18,8 @@
     "experimental": "Testing new ideas or telemetry behavior.",
     "legacy": "Older version retained for release history.",
     "ready for import test": "Prepared for the next import / confirmation step, but not yet confirmed on the target hardware.",
-    "bug fix update": "New maintenance release containing bug fixes and refinements."
+    "bug fix update": "New maintenance release containing bug fixes and refinements.",
+    "cm2 hardware verified": "This release has been imported and confirmed on a real MOZA CM2 display."
   },
   "dashboards": [
     {
@@ -679,22 +680,22 @@
     {
       "id": "moza-cm2-v3practice",
       "family": "Bugzila CM2 V3Practice",
-      "title": "Bugzila CM2 V3Practice.P3.017",
+      "title": "Bugzila CM2 V3Practice.P3.021",
       "platform": "MOZA CM2 Dashboard",
       "deviceProfile": "S09 Display",
       "hardwareVersion": "RS21-W08-HW SM-DU-V14",
       "resolution": "1280 × 720",
-      "version": "V3Practice.P3.017",
-      "releaseDate": "2026-09-01",
+      "version": "V3Practice.P3.021",
+      "releaseDate": "2026-09-05",
       "status": [
         "latest",
         "Bug Fix Update",
-        "Ready for Import Test"
+        "CM2 Hardware Verified"
       ],
-      "summary": "A 3-page practice and driver-training dashboard for MOZA CM2, designed for Assetto Corsa Competizione.",
-      "concept": "Built for beginner and intermediate sim racers who want to learn the track, improve pedal technique, understand tyre and brake behavior, and become more familiar with GT3 car controls. Page 1 answers ‘Where am I on the track?’, Page 2 answers ‘What am I doing with the pedals?’, and Page 3 answers ‘Are the tyres and brakes ready, and what is the car doing?’ The visual direction follows a high-contrast dark motorsport UI with large critical values, fast glance readability and consistent information placement between pages.",
-      "previewVersion": "V3Practice.P3.017",
-      "previewNote": "Preview screenshots are now real-device photos from Bugzila_CM2_V3Practice.P3.017. Current release is V3Practice.P3.017 — New Update / Bug Fix.",
+      "summary": "P3.021 replaces unreliable tyre-life data with a new color-coded Balance Graph, improves TYRE COACH readability, fixes ACC Fuel/Lap using a verified fallback calculation, and preserves the existing Delta, Dual Map, Pedal Training, and GT3 driver coaching features.",
+      "concept": "Built for beginner and intermediate sim racers who want to learn the track, improve pedal technique, understand tyre and brake behavior, and become more familiar with GT3 car controls. Page 1 answers “Where am I on the track?”, Page 2 answers “What am I doing with the pedals?”, and Page 3 answers “Are the tyres and brakes ready, and what is the car doing?”. P3.021 improves PAGE 3 — TYRES & BRAKES with clearer live telemetry presentation, a new color-coded Balance Graph, updated Readiness + Balance coaching, and a verified ACC Fuel/Lap fallback while preserving the existing Dual Map, Pedal Training and Delta behavior.",
+      "previewVersion": "V3Practice.P3.021",
+      "previewNote": "Page 1 and Page 2 preview screenshots remain real-device photos from Bugzila_CM2_V3Practice.P3.017. Page 3 preview is updated to a real-device P3.021 screenshot showing the new Readiness + Balance layout, Balance Graph, and Fuel/Lap fix. Current release is V3Practice.P3.021 — Bug Fix Update / CM2 Hardware Verified.",
       "features": [
         "Dual Map Track View",
         "Driver Map Rotation",
@@ -702,9 +703,10 @@
         "Pedal History Graph",
         "Throttle & Brake Coaching",
         "Tyre & Brake Thermal Status",
-        "Tyre Coach",
-        "Axle Balance",
-        "Fuel & Delta",
+        "Tyre Readiness Coach",
+        "Balance Graph",
+        "Fuel/Lap Fallback Fix",
+        "Delta vs Best Lap",
         "Car Control Popups",
         "Segmented RPM Bar",
         "Practice / Driver Training"
@@ -722,8 +724,8 @@
         },
         {
           "name": "Page 3 — Tyres & Brakes",
-          "description": "Tyre-management and brake-management page with four-wheel status, car controls, fuel, delta, tyre readiness, axle balance and environment data.",
-          "image": "./assets/cm2-v3practice/cm2-v3practice-p3-017-page-3.jpg"
+          "description": "Tyre-management and brake-management page with four-wheel status, car controls, fuel, live delta, Tyre Coach readiness, the new color-coded Balance Graph, and environment data.",
+          "image": "./assets/cm2-v3practice/cm2-v3practice-p3-021-page-3.png"
         }
       ],
       "compatibility": {
@@ -731,17 +733,17 @@
           {
             "name": "MOZA CM2 HD Racing Dash",
             "level": "native",
-            "label": "S09 TARGET / IMPORT TEST",
-            "note": "Target hardware for this dashboard family. V3Practice.P3.017 is currently Ready for Import Test and must not be described as Hardware Verified until this exact version is imported and confirmed on a real MOZA CM2 display."
+            "label": "CM2 HARDWARE VERIFIED",
+            "note": "Bugzila_CM2_V3Practice.P3.021 has been imported and confirmed on a real MOZA CM2 display. Balance Graph, Readiness + Balance layout, Fuel/Lap fallback, Tyre Readiness Coach, Best Lap and Live Delta behavior were verified on CM2 hardware."
           }
         ],
         "games": [
           {
             "name": "Assetto Corsa Competizione",
             "short": "ACC",
-            "level": "expected",
-            "label": "READY FOR IMPORT TEST",
-            "note": "Primary development game for V3Practice.P3.017. Real MOZA CM2 import confirmation is still pending for this exact version."
+            "level": "verified",
+            "label": "CM2 HARDWARE VERIFIED",
+            "note": "Primary development game for V3Practice.P3.021. Hardware verification completed on a real MOZA CM2 display, including Page 3 Balance Graph, Fuel/Lap fallback, Best Lap and live Delta behavior."
           },
           {
             "name": "Assetto Corsa",
@@ -776,11 +778,17 @@
       },
       "releaseHistory": [
         {
-          "version": "V3Practice.P3.017",
+          "version": "V3Practice.P3.021",
           "status": [
             "latest",
             "Bug Fix Update",
-            "Ready for Import Test"
+            "CM2 Hardware Verified"
+          ]
+        },
+        {
+          "version": "V3Practice.P3.017",
+          "status": [
+            "legacy"
           ]
         },
         {
@@ -797,10 +805,10 @@
         }
       ],
       "download": {
-        "releaseTag": "cm2-v3practice.p3.017",
-        "fileName": "Bugzila_CM2_V3Practice_P3_017.mzdash",
-        "releaseAssetUrl": "https://github.com/bugziladashboard/simracing/releases/download/cm2-v3practice.p3.017/Bugzila_CM2_V3Practice_P3_017.mzdash",
-        "releasePageUrl": "https://github.com/bugziladashboard/simracing/releases/tag/cm2-v3practice.p3.017"
+        "releaseTag": "cm2-v3practice.p3.021",
+        "fileName": "Bugzila_CM2_V3Practice_P3_021.mzdash",
+        "releaseAssetUrl": "https://github.com/bugziladashboard/simracing/releases/download/cm2-v3practice.p3.021/Bugzila_CM2_V3Practice_P3_021.mzdash",
+        "releasePageUrl": "https://github.com/bugziladashboard/simracing/releases/tag/cm2-v3practice.p3.021"
       },
       "heroLabel": "MOZA CM2 V3Practice",
       "useProfile": {
