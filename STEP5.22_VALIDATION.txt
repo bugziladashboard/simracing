@@ -1,0 +1,38 @@
+Bugzila Sim Racing Dashboard Hub — Step 5.22 Validation
+
+Baseline: Bugzila_SimRacing_Step5.21_CM2_IRACING_MAP_HARDWARE_VALIDATION_REPO_ROOT.zip
+Output: Bugzila_SimRacing_Step5.22_CM2_IRACING_MAP_FW_REQUIREMENT_SINGLE_SCROLLBAR_REPO_ROOT.zip
+
+Change scope:
+- Added iRacing Map firmware requirement notices to MOZA CM2 dashboard families that include Map functionality.
+- V3Practice.P3.021 remains the real-hardware validated reference: CM2 firmware 1.2.7.13, iRacing, Zolder, Driver Map + Full Track PASS.
+- CM2 V1 and CM2 V2RQP explicitly reference the firmware requirement without falsely claiming package-specific iRacing hardware validation.
+- Removed body overflow-x ownership so the document uses a single browser/page scrollbar; horizontal clipping remains on html.
+- No .mzdash / Map.qml / telemetry changes.
+
+Files intentionally changed:
+- data/dashboards.json
+- css/dashboards.css
+- index.html (cache-version strings only)
+- STEP5.22_VALIDATION.txt (new)
+
+Regression-sensitive checks:
+PASS — ACC compatibility entries preserved.
+PASS — AC is not marked Map PASS.
+PASS — LMU is not marked Map PASS.
+PASS — no duplicate compatibility table added.
+PASS — GA4 configuration/files retained.
+PASS — giscus configuration/files retained.
+PASS — Download Counter files retained.
+PASS — Ko-fi/support files retained.
+PASS — responsive/mobile rules retained; no media-query redesign.
+PASS — BUILT FOR THE TRACK. retained.
+PASS — Bugzila spelling check; no Bugzilla found in text/code files.
+PASS — no custom mirror/flip/coordinate inversion added.
+PASS — repository-root package structure.
+PASS — no UPLOAD_STEP*.txt included.
+Browser visual test: NOT VERIFIED (requires deployment/browser test).
+GitHub Pages deployment: NOT VERIFIED.
+Hardware evidence: USER-PROVIDED REAL HARDWARE VALIDATION for V3Practice.P3.021 / CM2 FW 1.2.7.13 / iRacing / Zolder.
+
+ZIP SHA-256: See companion STEP5.22_SHA256.txt (hash calculated after final packaging).

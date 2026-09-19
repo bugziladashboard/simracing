@@ -481,6 +481,13 @@
             "label": "VERIFIED"
           },
           {
+            "name": "iRacing",
+            "short": "iRacing",
+            "level": "expected",
+            "label": "MAP SUPPORT · FW 1.2.7.13",
+            "note": "For iRacing map use on a MOZA CM2 Display, update the display to firmware 1.2.7.13 before use. MOZA firmware 1.2.7.13 fixes the mirrored iRacing map issue. Real-hardware map validation was performed with Bugzila CM2 V3Practice.P3.021 at Zolder; this dashboard revision has not been separately hardware-validated for iRacing."
+          },
+          {
             "name": "Assetto Corsa",
             "short": "AC",
             "level": "expected",
@@ -509,7 +516,8 @@
             "label": "720P / NOT VERIFIED",
             "note": "MOZA specifies a 5.4-inch flexible OLED at 720P/60Hz. The nominal resolution matches the CM2 720P class, but dashboard package/device-profile compatibility has not been verified."
           }
-        ]
+        ],
+        "notice": "iRacing Map Firmware Requirement: Update the MOZA CM2 Display to firmware 1.2.7.13 before using the iRacing map so track orientation is corrected by MOZA firmware. Do not apply a custom Bugzila mirror/flip transform. Hardware-validation reference: Bugzila CM2 V3Practice.P3.021 at Zolder; this dashboard revision has not been separately validated for iRacing."
       },
       "releaseHistory": [
         {
@@ -603,6 +611,13 @@
             "note": "Designed around MOZA telemetry; V2RQP-specific real-device verification is pending."
           },
           {
+            "name": "iRacing",
+            "short": "iRacing",
+            "level": "expected",
+            "label": "MAP SUPPORT · FW 1.2.7.13",
+            "note": "For iRacing map use on a MOZA CM2 Display, update the display to firmware 1.2.7.13 before use. MOZA firmware 1.2.7.13 fixes the mirrored iRacing map issue. Real-hardware map validation was performed with Bugzila CM2 V3Practice.P3.021 at Zolder; this dashboard revision has not been separately hardware-validated for iRacing."
+          },
+          {
             "name": "Assetto Corsa",
             "short": "AC",
             "level": "expected",
@@ -631,7 +646,8 @@
             "label": "720P / NOT VERIFIED",
             "note": "MOZA specifies a 5.4-inch flexible OLED at 720P/60Hz. The nominal resolution matches the CM2 720P class, but dashboard package/device-profile compatibility has not been verified."
           }
-        ]
+        ],
+        "notice": "iRacing Map Firmware Requirement: Update the MOZA CM2 Display to firmware 1.2.7.13 before using the iRacing map so track orientation is corrected by MOZA firmware. Do not apply a custom Bugzila mirror/flip transform. Hardware-validation reference: Bugzila CM2 V3Practice.P3.021 at Zolder; this dashboard revision has not been separately validated for iRacing."
       },
       "releaseHistory": [
         {
@@ -750,7 +766,7 @@
             "short": "iRacing",
             "level": "verified",
             "label": "MAP PASS · HARDWARE VALIDATED",
-            "note": "Driver Map, Full Track, player marker and correct map orientation were validated on a real MOZA CM2 Display with firmware 1.2.7.13 at Zolder. The previously mirrored iRacing map issue is fixed by MOZA firmware; no Bugzila mirror/flip workaround is required."
+            "note": "Driver Map, Full Track, player marker and correct map orientation were validated on Bugzila CM2 V3Practice.P3.021 using a real MOZA CM2 Display with firmware 1.2.7.13 at Zolder. Update the CM2 Display to firmware 1.2.7.13 before using the iRacing map. The mirrored-map correction is provided by MOZA firmware; no Bugzila mirror/flip workaround is required."
           },
           {
             "name": "Assetto Corsa",
@@ -782,7 +798,7 @@
             "note": "MOZA specifies a 5.4-inch flexible OLED at 720P/60Hz. The nominal resolution matches the CM2 720P class, but dashboard package/device-profile compatibility has not been verified."
           }
         ],
-        "notice": "iRacing Map Support — Hardware Validated: Driver Map and Full Track were validated on a real MOZA CM2 Display with firmware 1.2.7.13 at Zolder. This firmware fixes the previously observed mirrored iRacing track-map issue. No custom mirror/flip workaround is required in the Bugzila dashboard. Validated with CM2 firmware 1.2.7.13."
+        "notice": "iRacing Map Support — Hardware Validated: Before using the iRacing map, update the MOZA CM2 Display to firmware 1.2.7.13. Bugzila CM2 V3Practice.P3.021 Driver Map and Full Track were hardware-validated at Zolder with firmware 1.2.7.13. This firmware fixes the previously mirrored iRacing track-map issue. No custom Bugzila mirror/flip correction is required."
       },
       "releaseHistory": [
         {
