@@ -1,3 +1,14 @@
+# Step 5.21 — CM2 iRacing Map Hardware Validation
+
+## Scope
+- Base: Step 5.20 CM2 V3Practice P3.021 package.
+- Website documentation / compatibility update only; no `.mzdash` revision is created.
+- Adds iRacing Map hardware validation for Bugzila CM2 V3Practice.P3.021 on a real MOZA CM2 Display with firmware 1.2.7.13 at Zolder.
+- Records Driver Map, Full Track, player marker and correct map orientation as hardware validated.
+- Records that the mirrored iRacing map issue is corrected by MOZA firmware; no Bugzila mirror/flip workaround is required.
+- Updates Assetto Corsa and Le Mans Ultimate Map status to Partial / Testing because native maps are not currently validated.
+- Preserves the proven ACC Map configuration and existing website features.
+
 # Step 5.20 — CM2 V3Practice P3.021 Update
 
 Current production package.

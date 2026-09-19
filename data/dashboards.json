@@ -742,15 +742,22 @@
             "name": "Assetto Corsa Competizione",
             "short": "ACC",
             "level": "verified",
-            "label": "CM2 HARDWARE VERIFIED",
-            "note": "Primary development game for V3Practice.P3.021. Hardware verification completed on a real MOZA CM2 display, including Page 3 Balance Graph, Fuel/Lap fallback, Best Lap and live Delta behavior."
+            "label": "MAP PASS · HARDWARE VALIDATED",
+            "note": "Native Driver Map / Full Track behavior has been validated on real MOZA CM2 hardware. Existing proven ACC Map.qml configuration remains unchanged."
+          },
+          {
+            "name": "iRacing",
+            "short": "iRacing",
+            "level": "verified",
+            "label": "MAP PASS · HARDWARE VALIDATED",
+            "note": "Driver Map, Full Track, player marker and correct map orientation were validated on a real MOZA CM2 Display with firmware 1.2.7.13 at Zolder. The previously mirrored iRacing map issue is fixed by MOZA firmware; no Bugzila mirror/flip workaround is required."
           },
           {
             "name": "Assetto Corsa",
             "short": "AC",
-            "level": "unverified",
-            "label": "NOT TESTED",
-            "note": "No release-specific validation recorded for this version."
+            "level": "partial",
+            "label": "PARTIAL / TESTING",
+            "note": "Map not currently validated. Driver Map and Full Track did not display during the latest real-hardware test. Do not treat Map support as confirmed."
           },
           {
             "name": "Assetto Corsa EVO",
@@ -762,9 +769,9 @@
           {
             "name": "Le Mans Ultimate",
             "short": "LMU",
-            "level": "unverified",
-            "label": "NOT TESTED",
-            "note": "No release-specific validation recorded for this version."
+            "level": "partial",
+            "label": "PARTIAL / TESTING",
+            "note": "Native map not currently validated. Previous real-hardware testing did not produce a usable native map."
           }
         ],
         "hardwareCandidates": [
@@ -774,7 +781,8 @@
             "label": "720P / NOT VERIFIED",
             "note": "MOZA specifies a 5.4-inch flexible OLED at 720P/60Hz. The nominal resolution matches the CM2 720P class, but dashboard package/device-profile compatibility has not been verified."
           }
-        ]
+        ],
+        "notice": "iRacing Map Support — Hardware Validated: Driver Map and Full Track were validated on a real MOZA CM2 Display with firmware 1.2.7.13 at Zolder. This firmware fixes the previously observed mirrored iRacing track-map issue. No custom mirror/flip workaround is required in the Bugzila dashboard. Validated with CM2 firmware 1.2.7.13."
       },
       "releaseHistory": [
         {

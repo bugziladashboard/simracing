@@ -1,0 +1,65 @@
+Bugzila Sim Racing Dashboard Hub — Step 5.21 Validation
+
+BASELINE
+Bugzila_SimRacing_Step5.20_CM2_V3PRACTICE_P3_021_REPO_ROOT.zip
+
+CANDIDATE
+Bugzila_SimRacing_Step5.21_CM2_IRACING_MAP_HARDWARE_VALIDATION_REPO_ROOT.zip
+
+SCOPE
+Website documentation / compatibility update only.
+No .mzdash revision created or modified.
+No Map.qml or telemetry logic modified.
+
+INTENDED SOURCE CHANGES
+1. data/dashboards.json
+   - Bugzila CM2 V3Practice.P3.021 compatibility only.
+   - ACC Map remains hardware validated and its proven configuration is not modified.
+   - Adds iRacing Map PASS / hardware validation at Zolder on MOZA CM2 firmware 1.2.7.13.
+   - Records Driver Map, Full Track, player marker, and correct orientation validation.
+   - Records that MOZA firmware fixes the mirrored-map issue and no Bugzila mirror/flip workaround is required.
+   - Assetto Corsa Map status changed from NOT TESTED to PARTIAL / TESTING; latest hardware test did not display Driver Map / Full Track.
+   - Le Mans Ultimate Map status changed from NOT TESTED to PARTIAL / TESTING; native map remains unvalidated.
+   - Assetto Corsa EVO entry preserved unchanged.
+
+2. js/dashboards.js
+   - Minimal renderer extension: if compatibility.notice exists, display it directly below the existing Supported / Tested Games pills.
+   - No new compatibility table/component created.
+
+3. README.md
+   - Adds Step 5.21 change record only.
+
+4. STEP5.21_VALIDATION.txt
+   - Current-step validation record.
+
+REGRESSION CHECK
+PASS — Baseline comparison shows no other source files changed.
+PASS — data/dashboards.json parses as valid JSON.
+PASS — js/dashboards.js passes node --check.
+PASS — No missing local references found in checked HTML/dashboard data.
+PASS — ACC information remains present; no ACC Map.qml configuration was modified.
+PASS — iRacing Map is marked hardware validated with firmware 1.2.7.13 and Zolder evidence.
+PASS — Assetto Corsa is not marked Map PASS.
+PASS — Le Mans Ultimate is not marked Map PASS.
+PASS — No duplicate compatibility table was added; existing Supported / Tested Games renderer is reused.
+PASS — GA4 measurement ID remains G-6DFKT3H8ZE and analytics files are unchanged.
+PASS — giscus / GitHub Discussions files are unchanged.
+PASS — Download Counter files are unchanged.
+PASS — Ko-fi/support files are unchanged.
+PASS — CSS is unchanged; responsive/mobile behavior code is unchanged.
+PASS — "BUILT FOR THE TRACK." remains present.
+PASS — No "Bugzilla" spelling found in checked website HTML/JS/data content.
+PASS — No custom iRacing mirror/flip transform was introduced.
+PASS — No .mzdash file was created or modified.
+
+BROWSER TEST
+NOT VERIFIED — static/package validation only; no deployed GitHub Pages browser session performed in this build environment.
+
+GITHUB PAGES TEST
+NOT VERIFIED — package not deployed by this validation process.
+
+HARDWARE EVIDENCE
+REAL HARDWARE VALIDATED — supplied by project owner: MOZA CM2 Display firmware 1.2.7.13, iRacing, Zolder, Bugzila CM2 V3Practice.P3.021; Driver Map and Full Track visually confirmed with correct orientation.
+
+FINAL ZIP SHA-256
+Provided in STEP5.21_SHA256.txt after final ZIP packaging (the ZIP cannot contain its own final hash without changing that hash).

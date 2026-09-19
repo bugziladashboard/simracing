@@ -18,7 +18,8 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
   function supportedGames(d) {
     const games = d.compatibility?.games || [];
     if (!games.length) return `<span class="muted-inline">Verification pending</span>`;
-    return `<div class="game-support-list">${games.map(g => gameTag(g)).join("")}</div>`;
+    const notice = d.compatibility?.notice ? `<p class="muted-inline compatibility-note">${esc(d.compatibility.notice)}</p>` : "";
+    return `<div class="game-support-list">${games.map(g => gameTag(g)).join("")}</div>${notice}`;
   }
 
   function bestFor(d) {
