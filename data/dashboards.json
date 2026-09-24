@@ -25,25 +25,27 @@
     {
       "id": "moza-ks-pro-v3",
       "family": "Bugzila Dashboard V3",
-      "title": "Bugzila Dashboard V3.P3.006",
+      "title": "Bugzila Dashboard V3.P3.007",
       "platform": "MOZA KS Pro",
       "deviceProfile": "W18 Display",
       "hardwareVersion": "RS21-W18-HW RGB-DU-V11",
       "resolution": "780 × 248",
-      "version": "V3.P3.006",
-      "releaseDate": "2026-08-23",
+      "version": "V3.P3.007",
+      "releaseDate": "2026-09-24",
       "status": [
         "latest",
         "stable"
       ],
-      "summary": "A compact three-page motorsport dashboard focused on adaptive shift guidance, pedal telemetry and lap analysis.",
+      "summary": "A compact three-page motorsport dashboard with iRacing speed fallback support, a single RGB RPM LED bar, Adaptive Shift Light and lap-focused driver telemetry.",
       "concept": "Keep the most important driving information readable at a glance on the KS Pro display while dedicating separate pages to pedal technique and lap performance.",
       "previewVersion": "V3.P3.004",
-      "previewNote": "Preview screenshots are from V3.P3.004. V3.P3.006 keeps the same dashboard layout and telemetry behavior with the updated flat dark gray #1C1F24 background theme.",
+      "previewNote": "Preview screenshots are from V3.P3.004, the proven KS Pro layout used as the structural baseline for V3.P3.007. V3.P3.007 adds the iRacing speed fallback and updates the RPM display to a single RGB LED bar while preserving Adaptive Shift Light and SHIFT NOW blink behavior.",
       "features": [
         "Adaptive Shift Light",
+        "SHIFT NOW Blink",
+        "Single RGB RPM LED Bar",
         "Speed & Gear",
-        "Engine RPM",
+        "iRacing Speed Fallback",
         "Native Pedal Chart",
         "Throttle & Brake %",
         "G-Force",
@@ -109,6 +111,13 @@
             "level": "unverified",
             "label": "NOT TESTED",
             "note": "Release-specific verification pending."
+          },
+          {
+            "name": "iRacing",
+            "short": "iRacing",
+            "level": "unverified",
+            "label": "EXPECTED",
+            "note": "V3.P3.007 adds speed fallback: SpeedKmh → Speed → SpeedMph → SpeedMs. Release-specific real-device verification is pending."
           }
         ],
         "hardwareCandidates": [
@@ -128,10 +137,16 @@
       },
       "releaseHistory": [
         {
-          "version": "V3.P3.006",
+          "version": "V3.P3.007",
           "status": [
             "latest",
             "stable"
+          ]
+        },
+        {
+          "version": "V3.P3.006",
+          "status": [
+            "legacy"
           ]
         },
         {
@@ -142,10 +157,10 @@
         }
       ],
       "download": {
-        "releaseTag": "ks-pro-v3.p3.006",
-        "fileName": "Bugzila_Dashboard_V3.P3.006.mzdash",
-        "releaseAssetUrl": "https://github.com/bugziladashboard/simracing/releases/download/ks-pro-v3.p3.006/Bugzila_Dashboard_V3.P3.006.mzdash",
-        "releasePageUrl": "https://github.com/bugziladashboard/simracing/releases/tag/ks-pro-v3.p3.006"
+        "releaseTag": "ks-pro-v3.p3.007",
+        "fileName": "Bugzila_Dashboard_V3.P3.007.mzdash",
+        "releaseAssetUrl": "https://github.com/bugziladashboard/simracing/releases/download/ks-pro-v3.p3.007/Bugzila_Dashboard_V3.P3.007.mzdash",
+        "releasePageUrl": "https://github.com/bugziladashboard/simracing/releases/tag/ks-pro-v3.p3.007"
       },
       "heroLabel": "MOZA KS PRO V3",
       "useProfile": {
