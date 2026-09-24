@@ -38,8 +38,8 @@
       ],
       "summary": "A compact three-page motorsport dashboard with iRacing speed fallback support, a single RGB RPM LED bar, Adaptive Shift Light and lap-focused driver telemetry.",
       "concept": "Keep the most important driving information readable at a glance on the KS Pro display while dedicating separate pages to pedal technique and lap performance.",
-      "previewVersion": "V3.P3.004",
-      "previewNote": "Preview screenshots are from V3.P3.004, the proven KS Pro layout used as the structural baseline for V3.P3.007. V3.P3.007 adds the iRacing speed fallback and updates the RPM display to a single RGB LED bar while preserving Adaptive Shift Light and SHIFT NOW blink behavior.",
+      "previewVersion": "V3.P3.007 / V3.P3.004",
+      "previewNote": "Page 1 preview is updated to the real-device V3.P3.007 screenshot. Page 2 and Page 3 previews remain from V3.P3.004, the proven KS Pro layout used as the structural baseline for V3.P3.007.",
       "features": [
         "Adaptive Shift Light",
         "SHIFT NOW Blink",
