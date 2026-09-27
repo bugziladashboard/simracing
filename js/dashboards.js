@@ -103,7 +103,8 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
     const history = d.releaseHistory.map(r => `
       <div class="release-item"><strong>${esc(r.version)}</strong><div class="release-statuses">${r.status.map(statusBadge).join("")}</div></div>`).join("");
 
-    const fileExtension = d.download?.fileName?.endsWith(".simhubdash") ? ".simhubdash" : ".mzdash";
+    const fileExtension = d.download?.fileName?.endsWith(".zip") ? "ZIP" : (d.download?.fileName?.endsWith(".simhubdash") ? ".simhubdash" : ".mzdash");
+    const installationNote = d.installationNote ? `<div class="installation-note"><h3>Installation</h3><p>${esc(d.installationNote)}</p></div>` : "";
 
     return `
       <section id="${esc(d.id)}" class="dashboard-detail">
@@ -151,6 +152,7 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
             <h3>Design Concept</h3>
             <p>${esc(d.concept)}</p>
             ${inspiration}
+            ${installationNote}
             <div class="feature-list">${features}</div>
             <p class="preview-note"><strong>Preview note:</strong> ${esc(d.previewNote)}</p>
           </div>
@@ -208,7 +210,7 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
 
   async function init() {
     try {
-      const response = await fetch("./data/dashboards.json?v=20260905-step5-20", { cache: "no-store" });
+      const response = await fetch("./data/dashboards.json?v=20260927-step5-25", { cache: "no-store" });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const data = await response.json();
       window.BugzilaDashboards.data = data;

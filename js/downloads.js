@@ -93,7 +93,7 @@ window.BugzilaDashboards = window.BugzilaDashboards || {};
 
   function dashboardAsset(asset) {
     const name = String(asset?.name || "").toLowerCase();
-    return name.endsWith(".mzdash") || name.endsWith(".simhubdash");
+    return name.endsWith(".mzdash") || name.endsWith(".simhubdash") || name.endsWith(".zip");
   }
 
   async function hydrateDownloads(data, force = false) {

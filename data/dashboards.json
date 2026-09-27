@@ -1,6 +1,6 @@
 {
   "schemaVersion": 6,
-  "updatedAt": "2026-09-05",
+  "updatedAt": "2026-09-27",
   "site": {
     "name": "Bugzila Sim Racing",
     "tagline": "Telemetry dashboards built for the track.",
@@ -25,47 +25,51 @@
     {
       "id": "moza-ks-pro-v3",
       "family": "Bugzila Dashboard V3",
-      "title": "Bugzila Dashboard V3.P3.007",
+      "title": "Bugzila Dashboard V3.P3.012",
       "platform": "MOZA KS Pro",
       "deviceProfile": "W18 Display",
       "hardwareVersion": "RS21-W18-HW RGB-DU-V11",
       "resolution": "780 × 248",
-      "version": "V3.P3.007",
-      "releaseDate": "2026-09-24",
+      "version": "V3.P3.012",
+      "releaseDate": "2026-09-27",
       "status": [
         "latest",
-        "stable"
+        "beta",
+        "Hardware Tested"
       ],
-      "summary": "A compact three-page motorsport dashboard with iRacing speed fallback support, a single RGB RPM LED bar, Adaptive Shift Light and lap-focused driver telemetry.",
-      "concept": "Keep the most important driving information readable at a glance on the KS Pro display while dedicating separate pages to pedal technique and lap performance.",
-      "previewVersion": "V3.P3.007 / V3.P3.004",
-      "previewNote": "Page 1 preview is updated to the real-device V3.P3.007 screenshot. Page 2 and Page 3 previews remain from V3.P3.004, the proven KS Pro layout used as the structural baseline for V3.P3.007.",
+      "summary": "A refined three-page driver-focused dashboard for MOZA KS Pro with Adaptive RGB Shift Bar, iRacing speed fallback, Native MOZA Pedal Monitor, Lap Performance Analysis, Carbon Motorsport background and BZD branding.",
+      "concept": "Fast, low-clutter driver telemetry for the KS Pro. Page 1 focuses on large Speed, Gear and RPM with car-dependent Adaptive Shift logic; Page 2 monitors pedal technique with native MOZA Chart.qml; Page 3 focuses on lap and average-speed performance.",
+      "previewVersion": "V3.P3.012",
+      "previewNote": "Page 1 preview is a real-device V3.P3.012 screenshot on MOZA KS Pro. The release keeps the proven three-page structure while refining UI spacing, Carbon visibility, BZD branding and Native MOZA resource packaging.",
       "features": [
-        "Adaptive Shift Light",
-        "SHIFT NOW Blink",
-        "Single RGB RPM LED Bar",
-        "Speed & Gear",
+        "Adaptive RGB Shift Bar",
+        "Car-dependent RPM Shift Logic",
         "iRacing Speed Fallback",
-        "Native Pedal Chart",
-        "Throttle & Brake %",
-        "G-Force",
-        "Lap Analysis",
-        "Average Speed Comparison"
+        "Large Speed / Gear / RPM",
+        "Native MOZA Chart.qml Pedal Monitor",
+        "Throttle / Brake History",
+        "Lap Performance Analysis",
+        "Current / Previous / Best / Average Lap",
+        "Average Speed Trend",
+        "Carbon Motorsport Background",
+        "BZD Branding",
+        "Native MOZA Resource Structure",
+        "Reduced Visual Clutter"
       ],
       "pages": [
         {
           "name": "Page 1 — Drive / Adaptive Shift",
-          "description": "Vehicle speed, current gear, engine RPM and adaptive shift guidance.",
+          "description": "Clean driver display with large Speed, Gear and RPM plus a continuous Adaptive RGB Shift Bar using car-dependent RPM percentage.",
           "image": "./assets/ks-pro/ks-pro-v3-page-1.png"
         },
         {
-          "name": "Page 2 — Native Pedal Chart",
-          "description": "Continuous throttle and brake traces using two native Chart.qml components with live percentages.",
+          "name": "Page 2 — Native Pedal Monitor",
+          "description": "Native MOZA Chart.qml pedal monitor with continuous Throttle and Brake history plus compact Speed, Gear, RPM and G information.",
           "image": "./assets/ks-pro/ks-pro-v3-page-2.png"
         },
         {
           "name": "Page 3 — Lap Analysis",
-          "description": "Current, previous, best and average lap analysis with average-speed comparison.",
+          "description": "Driver performance analysis for Current, Previous, Best and Average Lap plus Average Speed trend and compact delta references.",
           "image": "./assets/ks-pro/ks-pro-v3-page-3.png"
         }
       ],
@@ -115,9 +119,9 @@
           {
             "name": "iRacing",
             "short": "iRacing",
-            "level": "unverified",
-            "label": "EXPECTED",
-            "note": "V3.P3.007 adds speed fallback: SpeedKmh → Speed → SpeedMph → SpeedMs. Release-specific real-device verification is pending."
+            "level": "verified",
+            "label": "HARDWARE TESTED",
+            "note": "Speed, Gear, RPM, Adaptive Shift state and RGB RPM Bar were confirmed on real MOZA KS Pro hardware. Speed fallback uses SpeedKmh → Speed → SpeedMph → SpeedMs."
           }
         ],
         "hardwareCandidates": [
@@ -137,10 +141,30 @@
       },
       "releaseHistory": [
         {
-          "version": "V3.P3.007",
+          "version": "V3.P3.012",
           "status": [
             "latest",
-            "stable"
+            "beta",
+            "Hardware Tested"
+          ]
+        },
+        {
+          "version": "V3.P3.011",
+          "status": [
+            "legacy"
+          ]
+        },
+        {
+          "version": "V3.P3.008",
+          "status": [
+            "legacy"
+          ]
+        },
+        {
+          "version": "V3.P3.007",
+          "status": [
+            "legacy",
+            "Hardware Confirmed"
           ]
         },
         {
@@ -148,19 +172,13 @@
           "status": [
             "legacy"
           ]
-        },
-        {
-          "version": "V3.P3.004",
-          "status": [
-            "legacy"
-          ]
         }
       ],
       "download": {
-        "releaseTag": "ks-pro-v3.p3.007",
-        "fileName": "Bugzila_Dashboard_V3.P3.007.mzdash",
-        "releaseAssetUrl": "https://github.com/bugziladashboard/simracing/releases/download/ks-pro-v3.p3.007/Bugzila_Dashboard_V3.P3.007.mzdash",
-        "releasePageUrl": "https://github.com/bugziladashboard/simracing/releases/tag/ks-pro-v3.p3.007"
+        "releaseTag": "ks-pro-v3.p3.012",
+        "fileName": "Bugzila_Dashboard_V3.P3.012_Import.zip",
+        "releaseAssetUrl": "",
+        "releasePageUrl": ""
       },
       "heroLabel": "MOZA KS PRO V3",
       "useProfile": {
@@ -171,7 +189,8 @@
           "Lap Analysis",
           "Track Experience"
         ]
-      }
+      },
+      "installationNote": "IMPORTANT — IMAGE RESOURCES: Download the Import ZIP, extract it, and keep Bugzila_Dashboard_V3.P3.012.mzdash together with the Resource/MD5 folder before importing in MOZA Pit House / Dashboard Studio. Importing the .mzdash alone will omit the Carbon texture and BZD logo."
     },
     {
       "id": "moza-ks-pro-v2",
@@ -861,6 +880,130 @@
           "Telemetry Learning"
         ]
       }
+    },
+    {
+      "id": "moza-cm2-v5-rgbrace",
+      "family": "Bugzila V5 RGBRace",
+      "title": "Bugzila V5 RGBRace P1.012",
+      "platform": "MOZA CM2 Dashboard",
+      "deviceProfile": "S09 Display",
+      "hardwareVersion": "MOZA CM2 / S09",
+      "resolution": "1280 × 720",
+      "version": "P1.012",
+      "releaseDate": "2026-09-27",
+      "status": [
+        "latest",
+        "beta",
+        "Hardware Tested"
+      ],
+      "summary": "Color-first racing telemetry designed for fast visual recognition. Large numbers, fixed positions, RGB color and compact graphics keep essential race information readable at a glance.",
+      "concept": "SEE THE COLOR. READ ONLY WHAT MATTERS. RGB is functional telemetry rather than decoration: Green communicates normal or positive states, Yellow / Orange draws attention, Red marks braking, high RPM or warning states, Blue / Cyan carries secondary vehicle information, and White is neutral primary information.",
+      "previewVersion": "P1.012",
+      "previewNote": "Both previews are real-hardware MOZA CM2 test photos. Page 1 demonstrates the RGB Race layout; Page 2 demonstrates the GPS / INPUT layout with Driver Map, Full Track inset and Pedal History Graph.",
+      "features": [
+        "RGB Race Display",
+        "Continuous RGB RPM / Shift Bar",
+        "GPS Driver Map",
+        "Full Track Map",
+        "Pedal History Graph",
+        "RGB Tyre / Brake Status",
+        "Dynamic Delta",
+        "Flag Event Popups",
+        "Carbon / Kevlar UI"
+      ],
+      "pages": [
+        {
+          "name": "Page 1 — RGB RACE",
+          "description": "Primary race screen with large Gear, Speed and RPM, continuous RGB Shift Bar, Position, Lap, Delta, lap timing, compact TC / ABS / Brake Bias / ECU Map and color-first tyre / brake status.",
+          "image": "./assets/cm2-v5-rgbrace/cm2-v5-rgbrace-p1-012-page-1.jpg"
+        },
+        {
+          "name": "Page 2 — GPS / INPUT",
+          "description": "Track awareness and pedal analysis with rotating Driver Map, Full Track inset, Track Name, session information and continuous Throttle / Brake history.",
+          "image": "./assets/cm2-v5-rgbrace/cm2-v5-rgbrace-p1-012-page-2.jpg"
+        }
+      ],
+      "compatibility": {
+        "hardware": [
+          {
+            "name": "MOZA CM2 HD Racing Dash",
+            "level": "native",
+            "label": "HARDWARE TESTED",
+            "note": "Core V5 RGBRace functions have been physically demonstrated on a real MOZA CM2 display."
+          }
+        ],
+        "games": [
+          {
+            "name": "Assetto Corsa Competizione",
+            "short": "ACC",
+            "level": "verified",
+            "label": "HARDWARE TESTED",
+            "note": "Speed, Gear, RPM, RGB RPM bar, gear color behavior, TC, ABS, Brake Bias, ECU Map, lap timing, tyre/brake color indicators, Driver Map and Pedal Graph tested."
+          },
+          {
+            "name": "Assetto Corsa",
+            "short": "AC",
+            "level": "tested",
+            "label": "HARDWARE TESTED",
+            "note": "Driver Map works on tested circuits; GPS / INPUT and Pedal Graph tested. Map availability can depend on circuit / track data."
+          },
+          {
+            "name": "iRacing",
+            "short": "iRacing",
+            "level": "tested",
+            "label": "HARDWARE TESTED",
+            "note": "Speed, Gear, RPM, Driver Map, Full Track inset, Pedal Graph, Track Name, Position, Lap and Current Lap Time tested. Correct map orientation was tested with CM2 Display firmware 1.2.7.13. P1.012 Delta validity re-validation remains pending."
+          },
+          {
+            "name": "Le Mans Ultimate",
+            "short": "LMU",
+            "level": "unverified",
+            "label": "NOT VALIDATED",
+            "note": "Do not treat LMU compatibility as confirmed for this release."
+          }
+        ],
+        "notice": "iRacing map orientation was tested with MOZA CM2 Display firmware 1.2.7.13. P1.012 remains BETA while final real-hardware confirmation of the Delta validity gate and rolling-start flag popup timeout is pending."
+      },
+      "releaseHistory": [
+        {
+          "version": "P1.012",
+          "status": [
+            "latest",
+            "beta",
+            "Hardware Tested"
+          ]
+        },
+        {
+          "version": "P1.011",
+          "status": [
+            "legacy"
+          ]
+        },
+        {
+          "version": "P1.010",
+          "status": [
+            "legacy"
+          ]
+        }
+      ],
+      "download": {
+        "releaseTag": "cm2-v5-rgbrace.p1.012",
+        "fileName": "Bugzila_CM2_V5_RGBRace_P1_012_RELEASE.zip",
+        "releaseAssetUrl": "",
+        "releasePageUrl": ""
+      },
+      "heroLabel": "MOZA CM2 V5 RGBRace",
+      "useProfile": {
+        "driverLevel": "Intermediate to Professional-oriented",
+        "bestFor": [
+          "Race Sessions",
+          "Fast Visual Recognition",
+          "Track Awareness",
+          "Pedal Analysis",
+          "Tyre / Brake Monitoring"
+        ]
+      },
+      "installationNote": "Installation: Download the complete ZIP release and extract it. Keep Bugzila_CM2_V5_RGBRace_P1_012.mzdash together with its Resource/MD5 folder, then import the .mzdash from that extracted folder in MOZA Pit House / Dashboard Studio. Do not move the .mzdash away from its Resource folder before importing."
     }
   ],
   "gameStatusDefinitions": {
